@@ -9,16 +9,25 @@
   <div class="header">
     <h1>Studentgatans Bostadsförening: TVÄTTSTUGAN</h1>
   </div>
-  <div class="buttons">
-    <form action="booking.php">
-      <input class="booking_button" type="submit" name="booking" value="Boka Tid">
-    </form>
-    <form action="complaint.php">
-      <input class="complaint_button" type="submit" name="complaint" value="Gnäll">
-    </form>
-    <form action="createaccount.php">
-      <input class="create_acc_button" type="submit" name="create_account" value="Skapa Konto">
-    </form>
+  <div class="menu">
+    <ul>
+      <li><a href="index.php">Hem</a></li>
+      <li><a href="messageboard.php">Anslagstavla</a></li>
+      <li><a href="forum.php">Forum</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="buttons">
+      <form action="booking.php">
+        <input class="booking_button" type="submit" name="booking" value="Boka Tid">
+      </form>
+      <form action="complaint.php">
+        <input class="complaint_button" type="submit" name="complaint" value="Gnäll">
+      </form>
+      <form action="createaccount.php">
+        <input class="create_acc_button" type="submit" name="create_account" value="Skapa Konto">
+      </form>
+    </div>
   </div>
 </body>
 </html>
