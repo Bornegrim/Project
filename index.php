@@ -25,7 +25,10 @@
         <input class="complaint_button" type="submit" name="complaint" value="Gnäll">
       </form>
       <form action="createaccount.php">
-        <input class="create_acc_button" type="submit" name="create_account" value="Skapa Konto">
+        <button type="button" onclick="location.href='createaccount.php'">Skapa Konto</button>
+      </form>
+      <form action="logout-process.php">
+        <button type="button" onclick="location.href='logout-process.php'">Logout</button>
       </form>
     </div>
   </div>
