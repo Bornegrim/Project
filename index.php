@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+  session_start();
+
+  if (!isset($_SESSION['Email'])) {
+    header('Location: login.php');
+  }
+ ?>
+
 <html>
 <head>
   <meta charset="utf-8"></meta>
@@ -23,9 +30,6 @@
       </form>
       <form action="complaint.php">
         <input class="complaint_button" type="submit" name="complaint" value="Gnäll">
-      </form>
-      <form action="createaccount.php">
-        <button type="button" onclick="location.href='createaccount.php'">Skapa Konto</button>
       </form>
       <form action="logout-process.php">
         <button type="button" onclick="location.href='logout-process.php'">Logout</button>
