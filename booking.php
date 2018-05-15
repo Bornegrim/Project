@@ -1,21 +1,3 @@
-<?php
-
-session_start();
-
-$uname = "Bornelu";
-$pass = "Gitgud@@@123";
-$host = "n3plcpnl0118.prod.ams3.secureserver.net";
-$dbname = "Bornegrim";
-$tbl_name = "";
-
-$connection = new mysqli($host, $uname, $pass, $dbname);
-
-if ($connection->connect_error){
-  die("Connection failed: ".$connection.connect_error);
-}
-
-
- ?>
 <!DOCTYPE html>
 <html lang="swe" dir="ltr">
   <head>

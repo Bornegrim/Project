@@ -1,17 +1,8 @@
-<?php
-session_start();
-
-if (isset($_SESSION['Email'])) {
-  header('Location: index.php');
-} else if (isset($_GET['createaccountfail'])) {
-  echo "The e-mail adress is already in use";
-}
-
- ?>
 <!DOCTYPE html>
 <html
   <head>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <meta charset="utf-8">
     <title>Registration</title>
@@ -22,15 +13,15 @@ if (isset($_SESSION['Email'])) {
       <p>Please enter your information</p>
     </div>
     <div class="">
-      <form class="" action="createaccount-process.php" method="post" onsubmit="return checkLogin();">
+      <form class="" action="register-process.php" method="post" >
         First Name : <br>
-        <input type="text" name="firstnamereg" id="firstnamereg"><br>
+        <input type="text" name="firstName" id="firstName"><br>
         Last Name : <br>
-        <input type="text" name="lastnamereg" id="lastnamereg"><br>
+        <input type="text" name="lastName" id="lastName"><br>
         Email : <br>
-        <input type="text" name="emailreg" id="emailreg"><br>
+        <input type="text" name="email" id="email"><br>
         Password : <br>
-        <input type="password" name="passwordreg" id="passwordreg"><br>
+        <input type="password" name="password" id="password"><br>
         <input type="submit" name="reg" id="reg" value="submit">
       </form>
       <div class="">
