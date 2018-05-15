@@ -1,2 +1,2 @@
-<footer class="center">Created by Tvättbjörnen ABBA</footer>
+<footer class="footer">Created & Hosted by Tvättbjörnen AB</footer>
 </html>
