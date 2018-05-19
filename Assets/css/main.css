@@ -4,14 +4,58 @@ body {
     margin: 0;
     border: 0;
     font-family: 'Raleway', sans-serif;
+    background-color: #e6f5ff;
 }
 
 .title {
-    margin-left: 8px;
+    margin-left: 40px;
+    font-size: 18px;
 }
 
 .posts_container {
-    margin-left: 8px;
+    margin-left: 40px;
+}
+
+.menulist {
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3399ff;
+}
+
+.menulist_item {
+    float: left;
+}
+
+.menulist_item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.headerlist {
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #000024;
+}
+
+.headerlist_item {
+    float: right;
+}
+
+.headerlist_item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
 }
 
 .booking {
@@ -21,6 +65,72 @@ body {
   width:150px;
   height:100px;
   position:relative;
+}
+
+.login_container {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.dark_container {
+    display: inline-block;
+    text-align: center;
+    padding: 50px;
+    padding-top: 150px;
+    background-color: #000024;
+    color: white;
+    width: 250px;
+}
+
+#loginForm {
+    display: inline-block;
+    text-align: center;
+}
+
+#loginForm input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#loginForm input[type=submit] {
+    width: 100%;
+    background-color: #3399ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+#loginForm input[type=submit]:hover {
+    background-color: #0080ff;
+}
+
+#loginForm p {
+    margin: 10px;
+}
+
+#loginForm a {
+    background-color: #e6f5ff;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    color: #000024;
+    text-decoration: none;
+}
+
+#loginForm a:hover {
+    background-color: #99d6ff;
 }
 
 .footer {
@@ -38,7 +148,5 @@ body {
     top: 0;
     width: 100%;
     background-color: #0066b4;
-    padding: 10px 0;
-    padding-left: 10px;
     color: white;
 }

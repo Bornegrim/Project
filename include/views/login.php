@@ -8,21 +8,25 @@
     <title>Login</title>
   </head>
   <body>
-    <div class="name">
-      <h1>Login</h1>
-      <p>Please enter your information</p>
-    </div>
-    <div class="center">
-      <form class="center" action="login-process.php" method="post" id="loginForm">
-        Email : <br>
-        <input type="text" name="email" id="email"><br>
-        Password : <br>
-        <input type="password" name="password" id="password"><br>
-          <input type="submit" name="login" id="login" value="submit">
-      </form>
-    </div>
-    <div class="center">
-      Don't have an account?: <button type="button" onclick="location.href='register.php'">Create an account</button>
-    </div>
+      <div class=login_container>
+          <div class="dark_container">
+              <div class="name">
+                  <h1>Login</h1>
+                  <p>Please enter your information</p>
+              </div>
+              <div class="center">
+                  <form class="center" action="login-process.php" method="post" id="loginForm">
+                      <input class="login_input" type="text" name="email" id="email" placeholder="Email">
+                      <input class="login_input" type="password" name="password" id="password" placeholder="Lösenord">
+                      <input type="submit" name="login" id="login" value="Logga in">
+                      <p>Har du inte ett konto? </p>
+                      <a href="register.php">Skapa ett konto</a>
+                  </form>
+              </div>
+              <div class="center">
+                  
+              </div>
+          </div>
+      </div>
   </body>
 </html>
