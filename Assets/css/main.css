@@ -12,7 +12,7 @@ body {
 
 .title {
     margin: 40px;
-    margin-top: 80px;
+    margin-top: 40px;
     font-size: 18px;
 }
 
@@ -22,7 +22,6 @@ body {
 
 .header {
     position: sticky;
-    height: 80px;
     left: 0;
     top: 0;
     width: 100%;
@@ -31,17 +30,17 @@ body {
 }
 
 .headerlist {
-    font-size: 18px;
+    font-size: 20px;
     list-style-type: none;
     list-style: 20px;
     margin: 0;
     overflow: hidden;
     background-color: #000024;
-    height: 80px;
+    height: 110px;
 }
 
 .headerlist_item {
-    padding-top: 10px;
+    padding-top: 20px;
     float: right;
 }
 
@@ -50,7 +49,7 @@ body {
     padding-left: 20px;
 }
 
-.headerlist_item a {
+.headerlist_item a, p {
     display: block;
     color: white;
     text-align: center;
@@ -58,8 +57,11 @@ body {
     text-decoration: none;
 }
 
+
 .headerlist .header_img {
-    width: 58px;
+    padding: 10px;
+    border-radius: 15%;
+    width: 90px;
     height: auto;
 }
 

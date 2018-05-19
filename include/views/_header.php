@@ -2,9 +2,10 @@
 <html lang="swe" dir="ltr">
   <header class="header">
       <ul class="headerlist">
-          <li class="headerlist_img"><img src="Assets/img/Tvattbjornen_AB.jpg" alt="Tvättbjörnen AB" class="header_img"></li>
-          <li class="headerlist_item"><a href="logout-process.php">Logout</a></li>
+          <li class="headerlist_img"><img src="Assets/img/Tvattbjornen_AB_rund.jpg" alt="Tvättbjörnen AB" class="header_img"></li>
+          <li class="headerlist_item"><a href="logout-process.php">Logga ut</a></li>
           <li class="headerlist_item"><a href="">Användarvillkor</a></li>
+          <li class="headerlist_item"><p>Välkommen _namn_!</p></li>
       </ul>
       <div class="menu">
         <ul class="menulist">
