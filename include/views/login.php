@@ -10,12 +10,10 @@
   <body>
       <div class=login_container>
           <div class="dark_container">
-              <div class="name">
-                  <h1>Login</h1>
-                  <p>Please enter your information</p>
-              </div>
+              <img src="Assets/img/Tvattbjornen_AB.jpg" alt="Tvättbjörnen AB" class="login_img">
               <div class="center">
                   <form class="center" action="login-process.php" method="post" id="loginForm">
+                      <p>Logga in:</p>
                       <input class="login_input" type="text" name="email" id="email" placeholder="Email">
                       <input class="login_input" type="password" name="password" id="password" placeholder="Lösenord">
                       <input type="submit" name="login" id="login" value="Logga in">

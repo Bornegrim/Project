@@ -5,13 +5,6 @@
   <script src="Assets/js/main.js"></script>
 </head>
 <body>
-    <div class="menu">
-        <ul class="menulist">
-            <li class="menulist_item"><a href="index.php">Hem</a></li>
-            <li class="menulist_item"><a href="messageboard.php">Anslagstavla</a></li>
-            <li class="menulist_item"><a href="forum.php">Forum</a></li>
-        </ul>
-    </div>
     <div class="title">
     <h1>Studentgatans Bostadsförening: TVÄTTSTUGAN</h1>
   </div>
