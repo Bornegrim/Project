@@ -12,8 +12,8 @@ if (isset($_POST['login'])) {
   $login = $user->login($email, $password);
 
   if ($login) {
-    $authorizer->set($email);
-    $authorizer->set($name);
+    $authorizer->set('Email', $email);
+    $authorizer->set('Name', $name);
       
     header("Location: index.php");
     } else {

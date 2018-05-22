@@ -6,8 +6,8 @@ class Authorizer {
       session_start();
   }
 
-  public function set ($sessionName) {
-    $_SESSION['Email'] = $sessionName;
+  public function set ($sessionName, $sessionValue) {
+    $_SESSION[$sessionName] = $sessionValue;
   }
 
   public function sessionExist ($sessionName) {

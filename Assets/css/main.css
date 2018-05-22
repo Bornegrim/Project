@@ -49,7 +49,7 @@ body {
     padding-left: 20px;
 }
 
-.headerlist_item a p {
+.headerlist_item a, .headerlist_item p {
     display: block;
     color: white;
     text-align: center;

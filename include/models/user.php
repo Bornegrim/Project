@@ -73,7 +73,7 @@ class User extends Db {
         
         $result = $db->getEmail($email);
         $row = mysqli_fetch_array($result);
-        $name = $row['Name'];
+        $name = $row['FirstName'];
         return $name;
     }
 }
