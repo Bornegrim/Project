@@ -1,5 +1,6 @@
 <?php
 
+/*hej*/
 require 'include/bootstrap.php';
 
 $session = $authorizer->sessionExist('Email');
