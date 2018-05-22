@@ -3,13 +3,15 @@
 require 'include/bootstrap.php';
 
 if (isset($_POST['submit'])) {
+    $post = new Post();
+    $user = new User();
 
-  $post = new Post();
 
-  $message = $_POST['post'];
-  $email = $authorizer->get('Email');
-  $allPosts = $post-> createPost($message, $email);
-  }
+    $message = $_POST['message'];
+    $email = $authorizer->get('Email');
+    $userID = $user-> getUser($email);
+    $post-> createPost($message, $userID);
+}
 
 header("Location: index.php");
 exit();

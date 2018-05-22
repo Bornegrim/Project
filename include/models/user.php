@@ -76,4 +76,13 @@ class User extends Db {
         $name = $row['FirstName'];
         return $name;
     }
+    
+    public function getUser ($email) {
+        $db = new Db();
+        
+        $result = $db->getUser($email);
+        $row = mysqli_fetch_array($result);
+        $UserId = $row['UserID'];
+        return $UserId;
+    }
 }

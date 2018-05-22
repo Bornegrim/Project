@@ -11,7 +11,6 @@
         <ul class="menulist">
             <li class="menulist_item"><a href="index.php">Hem</a></li>
             <li class="menulist_item"><a href="booking.php">Boka tvättid</a></li>
-            <li class="menulist_item"><a href="messageboard.php">Anslagstavla</a></li>
             <li class="menulist_item"><a href="forum.php">Forum</a></li>
             <li class="menulist_item"><a href="http://www.tvättråd.se">Tvätthjälp!</a></li>
         </ul>

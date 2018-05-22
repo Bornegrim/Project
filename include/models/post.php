@@ -18,7 +18,7 @@
       }
     }
 
-    public function createPost($message, $email) {
+    public function createPost($message, $userID) {
 
       $db = new Db();
       $conn = $db->connect();
@@ -26,7 +26,7 @@
 
 
       if (!Empty($post) && !($post == " ")) {
-        $db->setPosts($message, $email);
+        $db->setPosts($message, $userID);
       }
     }
   }
