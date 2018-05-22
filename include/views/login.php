@@ -10,7 +10,7 @@
   <body>
       <div class=login_container>
           <div class="dark_container">
-              <img src="Assets/img/Tvattbjornen_AB.jpg" alt="Tvättbjörnen AB" class="login_img">
+              <img src="Assets/img/Tvattbjornen_AB_wb.jpg" alt="Tvättbjörnen AB" class="login_img">
               <div class="center">
                   <form class="center" action="login-process.php" method="post" id="loginForm">
                       <p>Logga in</p>
@@ -20,9 +20,6 @@
                       <p>Har du inte ett konto? </p>
                       <a href="register.php">Skapa ett konto</a>
                   </form>
-              </div>
-              <div class="center">
-                  
               </div>
           </div>
       </div>

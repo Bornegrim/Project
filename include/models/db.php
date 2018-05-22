@@ -39,7 +39,7 @@
     }
 
     protected function getEmail ($email) {
-      $sql = "SELECT Email FROM User WHERE Email = '$email'";
+      $sql = "SELECT Email, Name FROM User WHERE Email = '$email'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }

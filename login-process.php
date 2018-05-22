@@ -3,15 +3,18 @@
 require 'include/bootstrap.php';
 
 if (isset($_POST['login'])) {
+    $user = new User();
 
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-
-  $user = new User();
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $name = $user->getName($email);
+    
   $login = $user->login($email, $password);
 
   if ($login) {
     $authorizer->set($email);
+    $authorizer->set($name);
+      
     header("Location: index.php");
     } else {
       header("Location: login.php?loginfail=1");

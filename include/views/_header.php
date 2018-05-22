@@ -5,7 +5,7 @@
           <li class="headerlist_img"><img src="Assets/img/Tvattbjornen_AB_rund.jpg" alt="Tvättbjörnen AB" class="header_img"></li>
           <li class="headerlist_item"><a href="logout-process.php">Logga ut</a></li>
           <li class="headerlist_item"><a href="">Användarvillkor</a></li>
-          <li class="headerlist_item"><p>Välkommen _namn_!</p></li>
+          <li class="headerlist_item"><p>Välkommen <?php echo $_SESSION[$name]; ?></p></li>
       </ul>
       <div class="menu">
         <ul class="menulist">
