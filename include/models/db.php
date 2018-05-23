@@ -27,8 +27,8 @@
       mysqli_query($this->connect(), $sql);
     }
 
-    protected function getUser($email) {
-      $sql = "SELECT UserID, Email, Password FROM User WHERE Email = '$email'";
+    protected function getUser($email, $table) {
+      $sql = "SELECT UserID, Email, Password FROM $table WHERE Email = '$email'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
@@ -38,8 +38,8 @@
       mysqli_query($this->connect(), $sql);
     }
 
-    protected function getEmail ($email) {
-      $sql = "SELECT Email, FirstName FROM User WHERE Email = '$email'";
+    protected function getEmail ($email, $table) {
+      $sql = "SELECT Email, FirstName FROM $table WHERE Email = '$email'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
