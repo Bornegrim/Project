@@ -17,18 +17,18 @@
     }
 
     protected function getPosts() {
-      $sql = "SELECT UserID, Message FROM Messageboard_Post ORDER BY UserID ASC";
+      $sql = "SELECT Date, Message, UserID FROM Messageboard_Post ORDER BY Date ASC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
 
-    protected function setPosts($post, $email) {
-      $sql = "INSERT INTO posts(post, email)VALUES('$post', '$email')";
+    protected function setPosts($post, $userID) {
+      $sql = "INSERT INTO Messageboard_Post(message, userID)VALUES('$post', '$userID')";
       mysqli_query($this->connect(), $sql);
     }
 
     protected function getUser($email) {
-      $sql = "SELECT Email, Password FROM User WHERE Email = '$email'";
+      $sql = "SELECT UserID, Email, Password FROM User WHERE Email = '$email'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
