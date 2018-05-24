@@ -46,7 +46,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: black;
+    background-color: #001f33;
     color: white;
 }
 
@@ -56,7 +56,7 @@ body {
     list-style: 20px;
     margin: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #001f33;
     height: 110px;
 }
 
@@ -90,6 +90,12 @@ body {
     height: auto;
 }
 
+.header2_bottom {
+    width: 100%;
+    height: 2px;
+    background-color: #e6f5ff;
+}
+
 .menulist {
     font-size: 18px;
     list-style-type: none;
@@ -113,7 +119,7 @@ body {
 }
 
 .menulist_item a:hover {
-    color: #ffa64d;
+    color: black;
 }
 
 .booking {
@@ -137,7 +143,7 @@ body {
     padding: 15px;
     padding-left: 60px;
     padding-right: 60px;
-    background-color: black;
+    background-color: #001f33;
     color: white;
     width: 300px;
     border-radius: 10px;
@@ -149,7 +155,7 @@ body {
 }
 
 .dark_container .register_img {
-    width: 60%;
+    width: 55%;
     height: auto;
 }
 
@@ -192,7 +198,6 @@ body {
     margin: 8px 0;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     margin-bottom: 15px;
 }
 
@@ -204,7 +209,6 @@ body {
 #loginForm a {
     color: #ffa64d;
     text-decoration: none;
-    transition: all 0.2s linear;
 }
 
 #loginForm a:hover{
@@ -217,12 +221,13 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 4px;
-    color: #000024;
+    color: black;
     text-decoration: none;
 }
 
 #loginForm .change_page:hover {
-    background-color: #99d6ff;
+    background-color: #66c2ff;
+    color: black;
 }
 
 #loginForm .accept_terms {
@@ -234,7 +239,9 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    padding: 2px;
+    border-top: solid 2px #e6f5ff;
+    background-color: #001f33;
     color: white;
 }
 
@@ -242,9 +249,14 @@ body {
     position: relative;
     padding: 10px;
     float: right;
-    border: solid 5px black;
+    border: solid 5px #001f33;
     margin-right: 40px;
     border-radius: 10px;
+}
+
+.messageBoard_container h2 {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .messageBoard {
@@ -252,14 +264,17 @@ body {
     width: 300px;
     max-width: 300px;
     padding: 5px;
-    border: solid 1px black;
+    border: solid 1px #001f33;
     overflow: auto;
-    margin-bottom: 20px;
 }
 
 .post {
     padding-bottom: 5px;
     border-bottom: solid 1px #3399ff;
+}
+
+.messageBoard_input {
+    margin-top: 20px;
 }
 
 .messageBoard_input input[type=submit] {
@@ -277,4 +292,36 @@ body {
 
 .messageBoard_input input[type=submit]:hover {
     background-color: #0080ff;
+}
+
+.legal_container {
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.legal {
+    display: inline-block;
+    text-align: left;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #001f33;
+    color: white;
+    width: 700px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.legal h1 {
+    padding-bottom: 20px;
+}
+
+.legal h2 {
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+
+.legal #raccoon {
+    color: #ffa64d;
 }

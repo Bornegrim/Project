@@ -12,3 +12,4 @@ if ($session) {
 }
 
 include 'include/views/register.php';
+include 'include/views/_footer.php';

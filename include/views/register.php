@@ -18,8 +18,8 @@
                       <input class="login_input" type="text" name="lastName" id="lastName" placeholder="Efternamn">
                       <input class="login_input" type="text" name="email" id="email" placeholder="Email">
                       <input class="login_input" type="password" name="password" id="password" placeholder="Lösenord">
-                      <input class="accept_terms" type="checkbox" onchange="checkedChanged(this)"> Jag godkänner <a href="terms_conditions.php">användarvillkoren</a><p></p>
-                      <input class="gray_button" disabled="disabled" type="submit" name="reg" id="reg" value="Registrera Konto">
+                      <input class="accept_terms" type="checkbox" onchange="checkedChanged(this)"> Jag godkänner <a href="terms_conditions.php">användarvillkoren</a>
+                      <input class="gray_button" type="submit" name="reg" id="reg" value="Registrera Konto">
                       <p>Har du redan ett konto? </p>
                       <a class="change_page" href="login.php">Logga in på ditt konto</a>
                   </form>

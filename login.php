@@ -10,3 +10,4 @@
   }
 
   include 'include/views/login.php';
+    include 'include/views/_footer.php';
