@@ -43,4 +43,34 @@
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
+
+    private function getBookedTimeblock($timeBlock, $date, $machine) {
+      $sql = "SELECT TimeblockID FROM Booked_Timeblock WHERE TimeblockNumber = '$timeBlock' AND DateBooked = '$date' AND Machine ='$machine' ";
+      $result = mysqli_query($this->connect(), $sql);
+
+      $userdata = mysqli_fetch_object($result);
+      $timeBlockID = $userdata->TimeblockID;
+
+      return $timeBlockID;
+    }
+
+    private function setBooking($timeBlockID, $UserID) {
+
+      $sql = "INSERT INTO Booking(TimeblockID, User)VALUES('$timeBlockID', '$UserID')";
+      mysqli_query($this->connect(), $sql);
+
+    }
+
+    protected function setBookedTimeblock($timeBlock, $machine, $UserID, $date) {
+
+      $sql = "INSERT INTO Booked_Timeblock(TimeBlockNumber, DateBooked, Machine)VALUES('$timeBlock', '$date', '$machine')";
+      mysqli_query($this->connect(), $sql);
+
+      $timeBlockID = $this->getBookedTimeblock($timeBlock, $date, $machine);
+
+      $this->setBooking($timeBlockID, $UserID);
+
+    }
+
+
   }

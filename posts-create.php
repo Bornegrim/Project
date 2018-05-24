@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
 
     $message = $_POST['message'];
     $email = $authorizer->get('Email');
-    $userID = $user-> getUser($email);
+    $userID = $user-> getUser($email, 'User');
     $post-> createPost($message, $userID);
 }
 
