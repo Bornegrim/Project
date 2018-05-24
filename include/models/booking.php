@@ -8,6 +8,11 @@ class Booking extends Db {
       $db->setBookedTimeblock($timeBlock, $machine, $UserID, $date);
     }
 
+    public function getAllBookings() {
+      $db = new Db();
+      $result = $db->getAllBookings();
+      return $result;
+    }
 
 
 }

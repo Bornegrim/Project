@@ -9,8 +9,13 @@ if (isset($_POST['submit'])) {
 
     $message = $_POST['message'];
     $email = $authorizer->get('Email');
-    $userID = $user-> getUser($email, 'User');
-    $post-> createPost($message, $userID);
+
+    if (isset($_SESSION['Admin'])) {
+      $userID = $user-> getUser($email, 'Admin');
+      $post-> createPost($message, $userID);
+    }
+
+
 }
 
 header("Location: index.php");

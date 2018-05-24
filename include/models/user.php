@@ -49,7 +49,7 @@ class User extends Db {
     $firstNamereg = mysqli_real_escape_string($conn, trim($firstName));
     $lastNamereg = mysqli_real_escape_string($conn, trim($lastName));
 
-    $result = $db->getEmail($emailreg);
+    $result = $db->getEmail('Email', $emailreg, 'User');
 
     if (mysqli_num_rows($result) > 0) {
       header("Location: register.php?registerfail=1");
@@ -71,10 +71,10 @@ class User extends Db {
     }
   }
 
-    public function getName ($email, $table) {
+    public function getName ($column, $value, $table) {
         $db = new Db();
 
-        $result = $db->getEmail($email, $table);
+        $result = $db->getEmail($column, $value, $table);
         $row = mysqli_fetch_array($result);
         $name = $row['FirstName'];
         return $name;

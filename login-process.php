@@ -7,9 +7,10 @@ if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $name = $user->getName($email, "User");
-    $nameAdmin = $user->getName($email, "Admin");
+    $name = $user->getName('Email', $email, "User");
+    $nameAdmin = $user->getName('Email', $email, "Admin");
     $UserID = $user->getUser($email, 'User');
+    $UserIDadmin = $user->getUser($email, 'Admin');
 
     $login = $user->login($email, $password, 'User');
     $loginAdmin = $user->login($email, $password, 'Admin');
@@ -25,7 +26,7 @@ if (isset($_POST['login'])) {
     $authorizer->set('Email', $email);
     $authorizer->set('Name', $nameAdmin);
     $authorizer->set('User', $UserID);
-    $authorizer->set('Admin', $UserID);
+    $authorizer->set('Admin', $UserIDadmin);
 
     header("Location: index.php");
     exit();
