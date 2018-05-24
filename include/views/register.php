@@ -10,7 +10,7 @@
   <body>
       <div class=login_container>
           <div class="dark_container">
-              <img src="Assets/img/Tvattbjornen_AB_wb.jpg" alt="Tvättbjörnen AB" class="login_img">
+              <img src="Assets/img/Tvattbjornen_AB_wb.jpg" alt="Tvättbjörnen AB" class="register_img">
               <div class="center">
                   <form class="center" action="register-process.php" method="post" id="loginForm">
                       <p>Registrera konto</p>
@@ -18,9 +18,10 @@
                       <input class="login_input" type="text" name="lastName" id="lastName" placeholder="Efternamn">
                       <input class="login_input" type="text" name="email" id="email" placeholder="Email">
                       <input class="login_input" type="password" name="password" id="password" placeholder="Lösenord">
-                      <input type="submit" name="reg" id="reg" value="Registrera Konto">
+                      <input class="accept_terms" type="checkbox" onchange="checkedChanged(this)"> Jag godkänner <a href="terms_conditions.php">användarvillkoren</a><p></p>
+                      <input class="gray_button" disabled="disabled" type="submit" name="reg" id="reg" value="Registrera Konto">
                       <p>Har du redan ett konto? </p>
-                      <a href="login.php">Logga in på ditt konto</a>
+                      <a class="change_page" href="login.php">Logga in på ditt konto</a>
                   </form>
               </div>
           </div>

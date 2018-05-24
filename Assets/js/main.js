@@ -35,3 +35,15 @@ $(document).ready(function() {
 
     })
 });
+
+function checkedChanged(element) {
+    var myLayer = document.getElementById('reg');
+    if (element.checked === true) {
+        myLayer.className = "blue_button";
+        myLayer.disbled = "";
+    }
+    else {
+        myLayer.className = "gray_button";
+        myLayer.disabled = "disabled";
+    }
+};

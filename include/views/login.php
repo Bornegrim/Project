@@ -16,9 +16,9 @@
                       <p>Logga in</p>
                       <input class="login_input" type="text" name="email" id="email" placeholder="Email">
                       <input class="login_input" type="password" name="password" id="password" placeholder="Lösenord">
-                      <input type="submit" name="login" id="login" value="Logga in">
+                      <input class="blue_button" type="submit" name="login" id="login" value="Logga in">
                       <p>Har du inte ett konto? </p>
-                      <a href="register.php">Skapa ett konto</a>
+                      <a class="change_page" href="register.php">Skapa ett konto</a>
                   </form>
               </div>
           </div>
