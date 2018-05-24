@@ -16,7 +16,7 @@ class User extends Db {
     }
   }
 
-  public function login($email, $password) {
+  public function login($email, $password, $table) {
 
     $db = new Db();
     $conn = $db->connect();
@@ -27,14 +27,15 @@ class User extends Db {
 
     if ($this->test_email($emaillogin)) {
 
-        $result = $db->getUser($emaillogin);
+        $result = $db->getUser($emaillogin, $table);
 
         if (mysqli_num_rows($result) == 1) {
           $userdata = mysqli_fetch_array($result);
           $hashedpass = $userdata['Password'];
 
+          return password_verify($passwordlogin, $hashedpass);
         }
-        return password_verify($passwordlogin, $hashedpass);
+
     }
   }
 
@@ -45,6 +46,8 @@ class User extends Db {
 
     $emailreg = mysqli_real_escape_string($conn, trim($email));
     $passwordreg = mysqli_real_escape_string($conn, trim($password));
+    $firstNamereg = mysqli_real_escape_string($conn, trim($firstName));
+    $lastNamereg = mysqli_real_escape_string($conn, trim($lastName));
 
     $result = $db->getEmail($emailreg);
 
@@ -59,7 +62,7 @@ class User extends Db {
 
     if (!Empty($emailreg) && (!Empty($passwordreg) && !($passwordreg === " "))) {
       $passwordhashed = password_hash($passwordreg, PASSWORD_DEFAULT);
-      $db->regUser($firstName, $lastName, $passwordhashed, $emailreg);
+      $db->regUser($firstNamereg, $lastNamereg, $passwordhashed, $emailreg);
 
     } else {
       header("Location: register.php");
@@ -67,20 +70,20 @@ class User extends Db {
     }
     }
   }
-    
-    public function getName ($email) {
+
+    public function getName ($email, $table) {
         $db = new Db();
-        
-        $result = $db->getEmail($email);
+
+        $result = $db->getEmail($email, $table);
         $row = mysqli_fetch_array($result);
         $name = $row['FirstName'];
         return $name;
     }
-    
-    public function getUser ($email) {
+
+    public function getUser ($email, $table) {
         $db = new Db();
-        
-        $result = $db->getUser($email);
+
+        $result = $db->getUser($email, $table);
         $row = mysqli_fetch_array($result);
         $UserId = $row['UserID'];
         return $UserId;

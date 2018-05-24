@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+.popover {
+	left: 40% !important;
+}
+.btn {
+	margin: 1%;
+}
+
+#datep {
+    display: none;
+}
+
+.ui-datepicker-calendar tbody td > a.hover-calendar-cell {
+    border: 1px solid #074e91;
+    background: #5bacf7 url(images/ui-bg_glass_15_5bacf7_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #1a1a1a;
+}
+
+#addon{background-color:#999; width:100%}
+
 * {
     margin: 0;
     padding: 0;
@@ -258,4 +278,3 @@ body {
 .messageBoard_input input[type=submit]:hover {
     background-color: #0080ff;
 }
-

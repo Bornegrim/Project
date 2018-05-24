@@ -7,16 +7,26 @@ if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $name = $user->getName($email);
-    
-  $login = $user->login($email, $password);
+    $name = $user->getName($email, "User");
+    $nameAdmin = $user->getName($email, "Admin");
+
+  $login = $user->login($email, $password, 'User');
+  $loginAdmin = $user->login($email, $password, 'Admin');
 
   if ($login) {
     $authorizer->set('Email', $email);
     $authorizer->set('Name', $name);
-      
+
     header("Location: index.php");
-    } else {
+    exit();
+  } else if ($loginAdmin) {
+    $authorizer->set('Email', $email);
+    $authorizer->set('Name', $nameAdmin);
+    $authorizer->set('Admin', $email);
+
+    header("Location: index.php");
+    exit();
+  } else {
       header("Location: login.php?loginfail=1");
       exit();
       }
