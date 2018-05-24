@@ -1,5 +1,3 @@
-<?php  require 'include/bootstrap.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +19,9 @@
 <body>
 <div class=" col-md-4">
   <div  class="date-picker-2" id="ttry" aria-describedby="basic-addon2"></div>
-  <span class="" id="example-popover-2"></span> </div>
+  <span class="testar" id="example-popover-2"></span> </div>
   <div id="example-popover-2-content" class="hidden"> </div>
   <div id="example-popover-2-title" class="hidden"> </div>
+
 </body>
 </html>

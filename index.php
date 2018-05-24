@@ -10,5 +10,6 @@ if (!$session) {
 } else {
   include 'include/views/_header.php';
   include 'posts.php';
+  include 'booking.php';
   include 'include/views/_footer.php';
 }

@@ -17,7 +17,7 @@
     }
 
     protected function getPosts() {
-      $sql = "SELECT Date, Message, Admin.FirstName FROM Messageboard_Post JOIN Admin ON Messageboard_Post.UserID=Admin.UserID ORDER BY Date ASC";
+      $sql = "SELECT Date, Message, Admin.FirstName FROM Messageboard_Post JOIN Admin ON Messageboard_Post.UserID=Admin.UserID ORDER BY Date DESC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
@@ -45,44 +45,47 @@
     }
 
     private function getBookedTimeblock($timeBlock, $date, $machine) {
-      $sql = "SELECT TimeblockID FROM Booked_Timeblock WHERE TimeblockNumber = '$timeBlock' AND DateBooked = '$date' AND Machine ='$machine' ";
+
+      $time = date("Y-m-d", strtotime($date));
+
+      $sql = "SELECT TimeblockID FROM Booked_Timeblock WHERE TimeblockNumber = '$timeBlock' AND DateBooked = '$time' AND Machine ='$machine' ";
       $result = mysqli_query($this->connect(), $sql);
 
       $userdata = mysqli_fetch_object($result);
 
       if (mysqli_num_rows($result) > 0) {
-
         $timeBlockID = $userdata->TimeblockID;
-
         return $timeBlockID;
       }
-
     }
 
     private function setBooking($timeBlockID, $UserID) {
-
       $sql = "INSERT INTO Booking(TimeblockID, User)VALUES('$timeBlockID', '$UserID')";
       mysqli_query($this->connect(), $sql);
-
     }
 
     protected function setBookedTimeblock($timeBlock, $machine, $UserID, $date) {
 
-      $result = $this->getBookedTimeblock($timeBlock, $date, $machine);
+      $time = date("Y-m-d", strtotime($date));
+
+      $result = $this->getBookedTimeblock($timeBlock, $time, $machine);
 
       if (Empty($result)) {
-        $sql = "INSERT INTO Booked_Timeblock(TimeBlockNumber, DateBooked, Machine)VALUES('$timeBlock', '$date', '$machine')";
+        $sql = "INSERT INTO Booked_Timeblock(TimeBlockNumber, DateBooked, Machine)VALUES('$timeBlock', '$time', '$machine')";
         mysqli_query($this->connect(), $sql);
 
-        $timeBlockID = $this->getBookedTimeblock($timeBlock, $date, $machine);
+        $timeBlockID = $this->getBookedTimeblock($timeBlock, $time, $machine);
 
         $this->setBooking($timeBlockID, $UserID);
       }
 
     }
 
-    protected function getAllBookings() {
-      $sql = "SELECT TimeBlockNumber, DateBooked, Machine FROM Booked_Timeblock";
+    protected function getAllBookings($date) {
+
+      $time = date("Y-m-d", strtotime($date));
+
+      $sql = "SELECT TimeblockNumber, Machine FROM Booked_Timeblock WHERE DateBooked = '$time'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }

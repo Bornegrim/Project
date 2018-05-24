@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+
+div.ui-datepicker {
+	position: absolute !important;
+ 	font-size: 30px;
+}
+
+.show {
+    display:inline-block;
+}
+.hide {
+    display:none;
+}
+
 .popover {
-	left: 40% !important;
+	left: 81% !important;
+	width: 500px !important;
+	top: 50% !important;
 }
 .btn {
 	margin: 1%;
@@ -190,6 +205,18 @@ body {
     background-color: #0080ff;
 }
 
+.disable_button {
+    width: 100%;
+    background-color: darkgray;
+    color: grey;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+		pointer-events: none;
+}
+
 .gray_button {
     width: 100%;
     background-color: darkgray;
@@ -252,6 +279,7 @@ body {
     border: solid 5px #001f33;
     margin-right: 40px;
     border-radius: 10px;
+
 }
 
 .messageBoard_container h2 {
@@ -260,7 +288,7 @@ body {
 }
 
 .messageBoard {
-    height: 220px;
+    height: 100%;
     width: 300px;
     max-width: 300px;
     padding: 5px;
