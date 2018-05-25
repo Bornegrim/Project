@@ -2,8 +2,7 @@
   require 'include/bootstrap.php';
 
   $booking = new Booking();
-
-
+  
   $timeBlock1 = 1;
   $timeBlock2 = 2;
   $timeBlock3 = 3;

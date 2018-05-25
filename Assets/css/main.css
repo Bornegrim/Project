@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 
-div.ui-datepicker {
-	position: absolute !important;
- 	font-size: 30px;
-}
-
 .show {
     display:inline-block;
 }
@@ -13,11 +8,6 @@ div.ui-datepicker {
     display:none;
 }
 
-.popover {
-	left: 81% !important;
-	width: 500px !important;
-	top: 50% !important;
-}
 .btn {
 	margin: 1%;
 }

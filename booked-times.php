@@ -13,7 +13,7 @@
                 <option value="2">Tvättmaskin 2</option>
                 <option value="3">Tvättmaskin 3</option>
                 </select>
-                    <form action="booking-progress.php" method="post" id="bookingForm1" class="show" name="bookingForm1">';
+                    <form action="booking-process.php" method="post" id="bookingForm1" class="show" name="bookingForm1">';
     $form1block1 = '<input name="block1" type="submit" class="blue_button" value="07:00 – 10:00"><br>';
     $form1block2 = '<input name="block2" type="submit" class="blue_button" value="10:00 – 13:00"><br>';
     $form1block3 = '<input name="block3" type="submit" class="blue_button" value="13:00 – 16:00"><br>';
@@ -22,7 +22,7 @@
                     <input name="date" id="date" class="hide" type="text" value=" '. $date .' ">
                     <input name="machine" id="machine" class="hide" type="text" value="1">
                     </form>';
-    $form2block1 = '<form action="booking-progress.php" method="post" id="bookingForm2" class="hide" name="bookingForm2">
+    $form2block1 = '<form action="booking-process.php" method="post" id="bookingForm2" class="hide" name="bookingForm2">
                     <input name="block1" type="submit" class="blue_button" value="07:00 – 10:00"><br>';
     $form2block2 = '<input name="block2" type="submit" class="blue_button" value="10:00 – 13:00"><br>';
     $form2block3 = '<input name="block3" type="submit" class="blue_button" value="13:00 – 16:00"><br>';
@@ -31,7 +31,7 @@
                     <input name="date" id="date" class="hide" type="text" value=" '. $date .' ">
                     <input name="machine" id="machine" class="hide" type="text" value="2">
                     </form>';
-    $form3block1 = '<form action="booking-progress.php" method="post" id="bookingForm3" class="hide" name="bookingForm3">
+    $form3block1 = '<form action="booking-process.php" method="post" id="bookingForm3" class="hide" name="bookingForm3">
                     <input name="block1" type="submit" class="blue_button" value="07:00 – 10:00"><br>';
     $form3block2 = '<input name="block2" type="submit" class="blue_button" value="10:00 – 13:00"><br>';
     $form3block3 = '<input name="block3" type="submit" class="blue_button" value="13:00 – 16:00"><br>';

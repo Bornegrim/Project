@@ -82,10 +82,32 @@
     }
 
     protected function getAllBookings($date) {
-
       $time = date("Y-m-d", strtotime($date));
 
       $sql = "SELECT TimeblockNumber, Machine FROM Booked_Timeblock WHERE DateBooked = '$time'";
+      $result = mysqli_query($this->connect(), $sql);
+      return $result;
+    }
+
+    protected function createTopic($topicName) {
+      $sql = "INSERT INTO Forum(Topic)VALUES('$topicName')";
+      mysqli_query($this->connect(), $sql);
+    }
+
+    protected function createForumPost($date, $message, $ForumID, $UserID) {
+
+      $sql = "INSERT INTO Forum_Post(Date, Message, ForumID, UserID)VALUES('$date', '$message', '$ForumID', '$UserID')";
+      mysqli_query($this->connect(), $sql);
+    }
+
+    protected function getAllTopics() {
+      $sql = "SELECT ForumID, Topic FROM Forum";
+      $result = mysqli_query($this->connect(), $sql);
+      return $result;
+    }
+
+    protected function getAllForumPosts($ForumID) {
+      $sql = "SELECT Date, Message, User.FirstName FROM Forum_Post JOIN Forum ON Forum_Post.ForumID=Forum.ForumID JOIN User ON Forum_Post.UserID=User.UserID WHERE Forum_Post.ForumID = '$ForumID' ORDER BY Forum_PostID ASC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
