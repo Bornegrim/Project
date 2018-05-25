@@ -18,6 +18,7 @@
               echo '<form action="forum-posts.php" method="post" id="topic" class="" name="topic">';
               echo '<input name="topicName" id="topicName" type="submit" value=" '.$topic['Topic'].'">';
               echo '<input name="topicID" id="topicID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
+              echo '</form>';
               echo "</div>";
               echo '</br>';
           }

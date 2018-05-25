@@ -6,6 +6,7 @@ if (isset($_POST['topicName']) && isset($_POST['topicID'])) {
   $topicName = $_POST['topicName'];
   $topicID = $_POST['topicID'];
 
+
   $forum = new Forum();
   $allPosts = $forum->getAllForumPosts($topicID);
 
