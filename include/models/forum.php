@@ -45,4 +45,14 @@ class Forum extends Db {
       return $data;
     }
   }
+
+  public function deleteForumTopic($forumID) {
+    $db = new Db();
+    $db->deleteForumTopic($forumID);
+  }
+
+  public function editForumPost($forumPostID, $newMessage) {
+    $db = new Db();
+    $db->editForumPost($forumPostID, $newMessage);
+  }
 }

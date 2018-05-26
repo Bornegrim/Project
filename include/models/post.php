@@ -29,4 +29,11 @@
         $db->setPosts($message, $userID);
       }
     }
+
+    public function deletePost($postID) {
+
+      $db = new Db();
+      $db->deletePost($postID);
+
+    }
   }

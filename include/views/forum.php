@@ -21,6 +21,15 @@
               echo '</form>';
               echo "</div>";
               echo '</br>';
+              if (isset($_SESSION['Admin'])) {
+                echo '<div class=""> ';
+                echo '<form action="forum-delete-process.php" class="" method="post" id="delete" name="delete">';
+                echo '<input name="forumID" id="forumID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
+                echo '<button type="submit" name="delete" id="delete">delete</button>';
+                echo '</form>';
+                echo "</div>";
+              }
+
           }
           echo '</div>';
       }

@@ -1,3 +1,11 @@
+
+$(document).ready(function () {
+  $('#test123').click(function(){
+    alert("test");
+  });
+});
+
+
 $(document).ready(function () {
   $('#postForm').submit(function(){
      if($.trim($('#message').val()) == ""){

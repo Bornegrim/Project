@@ -17,13 +17,18 @@
     }
 
     protected function getPosts() {
-      $sql = "SELECT Date, Message, Admin.FirstName FROM Messageboard_Post JOIN Admin ON Messageboard_Post.UserID=Admin.UserID ORDER BY Date DESC";
+      $sql = "SELECT PostID, Date, Message, Admin.FirstName FROM Messageboard_Post JOIN Admin ON Messageboard_Post.UserID=Admin.UserID ORDER BY Date DESC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
 
     protected function setPosts($post, $userID) {
       $sql = "INSERT INTO Messageboard_Post(Message, UserID)VALUES('$post', '$userID')";
+      mysqli_query($this->connect(), $sql);
+    }
+
+    protected function deletePost($postID) {
+      $sql = "DELETE FROM Messageboard_Post WHERE PostID='$postID'";
       mysqli_query($this->connect(), $sql);
     }
 
@@ -107,12 +112,27 @@
     }
 
     protected function getAllForumPosts($ForumID) {
-      $sql = "SELECT Date, Message, User.FirstName FROM Forum_Post JOIN Forum ON Forum_Post.ForumID=Forum.ForumID JOIN User ON Forum_Post.UserID=User.UserID WHERE Forum_Post.ForumID = '$ForumID' ORDER BY Forum_PostID ASC";
+      $sql = "SELECT Forum_PostID, Date, Message, User.FirstName FROM Forum_Post JOIN Forum ON Forum_Post.ForumID=Forum.ForumID JOIN User ON Forum_Post.UserID=User.UserID WHERE Forum_Post.ForumID = '$ForumID' ORDER BY Forum_PostID ASC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
 
+    protected function deleteForumTopic($ForumID) {
+      $sql1 = "DELETE FROM Forum WHERE ForumID = '$ForumID'";
+      $sql2 = "DELETE FROM Forum_Post WHERE ForumID = '$ForumID'";
+      mysqli_query($this->connect(), $sql1);
+      mysqli_query($this->connect(), $sql2);
+    }
 
+    protected function deleteForumPost($forumPostID) {
+      $sql = "DELETE FROM Forum_Post WHERE Forum_PostID = '$forumPostID'";
+      mysqli_query($this->connect(), $sql1);
+    }
+
+    protected function editForumPost($forumPostID, $newMessage) {
+      $sql = "UPDATE Forum_Post SET Message='$newMessage' WHERE Forum_PostID = '$forumPostID'";
+      mysqli_query($this->connect(), $sql1);
+    }
 
 
   }
