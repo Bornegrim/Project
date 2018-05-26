@@ -112,7 +112,7 @@
     }
 
     protected function getAllForumPosts($ForumID) {
-      $sql = "SELECT Forum_PostID, Date, Message, User.FirstName FROM Forum_Post JOIN Forum ON Forum_Post.ForumID=Forum.ForumID JOIN User ON Forum_Post.UserID=User.UserID WHERE Forum_Post.ForumID = '$ForumID' ORDER BY Forum_PostID ASC";
+      $sql = "SELECT Forum_Post.UserID, Forum_PostID, Date, Message, User.FirstName FROM Forum_Post JOIN Forum ON Forum_Post.ForumID=Forum.ForumID JOIN User ON Forum_Post.UserID=User.UserID WHERE Forum_Post.ForumID = '$ForumID' ORDER BY Forum_PostID ASC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
@@ -126,13 +126,7 @@
 
     protected function deleteForumPost($forumPostID) {
       $sql = "DELETE FROM Forum_Post WHERE Forum_PostID = '$forumPostID'";
-      mysqli_query($this->connect(), $sql1);
+      mysqli_query($this->connect(), $sql);
     }
-
-    protected function editForumPost($forumPostID, $newMessage) {
-      $sql = "UPDATE Forum_Post SET Message='$newMessage' WHERE Forum_PostID = '$forumPostID'";
-      mysqli_query($this->connect(), $sql1);
-    }
-
 
   }

@@ -1,6 +1,6 @@
 <html lang="swe" dir="ltr">
   <head>
-    
+
   </head>
     <body>
 
@@ -19,14 +19,13 @@
                         echo $post['Message'];
                         echo '</br>';
                         echo $post['Date'];
-                        echo "</div>";
                         if (isset($_SESSION['Admin'])) {
                           echo '<form action="delete-posts-process.php" method="post">
                                 <input type="text" class="hide" name="postID" id="postID" value="'.$post['PostID'].'"><br>
                                 <button type="submit" name="delete" id="delete">delete</button>
                                 </form>';
                         }
-
+                        echo "</div>";
                     }
                     echo '</div>';
                 }

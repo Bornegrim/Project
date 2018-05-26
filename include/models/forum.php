@@ -51,8 +51,8 @@ class Forum extends Db {
     $db->deleteForumTopic($forumID);
   }
 
-  public function editForumPost($forumPostID, $newMessage) {
+  public function deleteForumPost($forumPostID) {
     $db = new Db();
-    $db->editForumPost($forumPostID, $newMessage);
+    $db->deleteForumPost($forumPostID);
   }
 }
