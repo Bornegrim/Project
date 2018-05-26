@@ -9,9 +9,5 @@
     <div class="title">
         <h1>Studentgatans Bostadsförening: TVÄTTSTUGAN</h1>
     </div>
-    <div class="posts_container">
-        <div class="main">
-        </div>
-    </div>
 </body>
 </html>
