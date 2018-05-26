@@ -37,9 +37,23 @@ body {
 
 .title {
     margin: 20px;
-    margin-top: 40px;
     margin-left: 40px;
     font-size: 18px;
+    max-width: 900px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.forum_title {
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
 }
 
 .posts_container {
@@ -53,6 +67,7 @@ body {
     width: 100%;
     background-color: #001f33;
     color: white;
+    z-index: +1;
 }
 
 .headerlist {
@@ -87,12 +102,12 @@ body {
     text-decoration: none;
 }
 
-
 .headerlist .header_img {
     padding: 10px;
     border-radius: 15%;
     width: 90px;
     height: auto;
+    box-sizing: content-box;
 }
 
 .header2_bottom {
@@ -269,18 +284,21 @@ body {
     border: solid 5px #001f33;
     margin-right: 40px;
     border-radius: 10px;
-
+    margin-bottom: 40px;
+    margin-top: -50px;
+    max-height: 450px;
 }
 
 .messageBoard_container h2 {
     text-align: center;
     margin-bottom: 5px;
+    z-index: -1 !important;
 }
 
 .messageBoard {
-    height: 100%;
-    width: 300px;
-    max-width: 300px;
+    height: 200px;
+    width: 450px;
+    max-width: 450px;
     padding: 5px;
     border: solid 1px #001f33;
     overflow: auto;
@@ -291,8 +309,12 @@ body {
     border-bottom: solid 1px #3399ff;
 }
 
+.message {
+    width: 450px
+}
+
 .messageBoard_input {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .messageBoard_input input[type=submit] {
@@ -301,11 +323,9 @@ body {
     background-color: #3399ff;
     color: white;
     padding: 12px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 15px;
 }
 
 .messageBoard_input input[type=submit]:hover {
@@ -343,3 +363,144 @@ body {
 .legal #raccoon {
     color: #ffa64d;
 }
+
+.forum_container {
+    display: block;
+    text-align: center;
+}
+
+.forum_input_container {
+    display: block;
+    text-align: center;
+}
+
+.forum {
+    display: inline-block;
+    text-align: left;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #001f33;
+    color: white;
+    width: 60%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.forum_title h1 {
+    color: white;
+    margin-bottom: 80px;
+}
+
+.forum_input {
+    display: inline-block;
+    text-align: left;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #001f33;
+    color: white;
+    width: 60%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 40px;
+}
+
+.forum_topic_container {
+    border: solid 2px #3399ff;
+}
+
+.forum_topic_header {
+    background-color: #3399ff;
+    color: white;
+    font-size: 14pt;
+    padding: 12px 20px;
+    
+}
+
+.forum_topic {
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    width: 100%;
+    background-color: #001f33;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-top: solid 1px #3399ff;
+    cursor: pointer;
+}
+
+.forum_topic:hover {
+    color: #ffa64d;
+}
+
+.topic {
+    margin-bottom: 5px;
+    height: 25px;
+    width: 200px;
+}
+
+.submit_topic {
+    width: 200px !important;
+}
+
+.comment {
+    margin-bottom: 5px;
+    height: 60px;
+    width: 450px;
+}
+
+.submit_comment {
+    width: 450px !important;
+}
+
+.forum_input_header h2 {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 20px;
+}
+
+.col-md-4 {
+    height: 50px !important;
+    z-index: -1 !important;
+}
+
+.ui-datepicker-header, ui-widget-header, ui-helper-clearfix, ui-corner-all {
+    height: 50px !important;
+}
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after  {
+    content: none !important;
+}
+
+.ui-datepicker-inline .ui-datepicker .ui-widget .ui-widget-content .ui-helper-clearfix .ui-corner-all {
+    height: 50px !important;
+}
+
+.date-picker-2, .hasDatepicker {
+    width: 238px !important;
+    margin: 0px !important;
+}
+
+.popover {
+    margin-top: 100px;
+    float: left !important;
+    margin-left: 20px !important;
+}
+
+.arrow, .pop {
+    top: 30% !important;
+}
+
+
+@media screen and (max-width: 1375px) {
+    .messageBoard_container {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .messageBoard {
+        width: 300px;
+    }
+} 

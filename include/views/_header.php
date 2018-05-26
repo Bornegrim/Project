@@ -10,9 +10,8 @@
       <div class="menu">
         <ul class="menulist">
             <li class="menulist_item"><a href="index.php">Hem</a></li>
-            <li class="menulist_item"><a href="booking.php">Boka tvättid</a></li>
-            <li class="menulist_item"><a href="forum.php">Forum</a></li>
-            <li class="menulist_item"><a href="http://www.tvättråd.se">Tvätthjälp!</a></li>
+            <li class="menulist_item"><a href="forum.php">Diskussionsrummet</a></li>
+            <li class="menulist_item"><a href="http://www.tvättråd.se" target="_blank">Tvätthjälp!</a></li>
         </ul>
     </div>
   </header>

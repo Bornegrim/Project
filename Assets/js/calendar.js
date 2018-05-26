@@ -36,14 +36,14 @@ $(document).ready(function () {
     maxDate: 30,
 
     onSelect: function(dateText) {
-      $('#example-popover-2-title').html('<b>tvättider</b>');
+      $('#example-popover-2-title').html('<b>Tvättider</b>');
       var html = "";
       var date = dateText;
       $.post("booked-times.php", {
         date: date
       }, function(data) {
         var html = data;
-        $('#example-popover-2-content').html('tvättider <strong>'+dateText+'</strong><br>'+html);
+        $('#example-popover-2-content').html('Tvättider <strong>'+dateText+'</strong><br>'+html);
         $('.date-picker-2').popover('show');
         //confirm("du kommer att boka" + dateText);
       });

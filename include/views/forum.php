@@ -6,25 +6,27 @@
     <title>Forum</title>
   </head>
   <body>
-    <div class="">
-      <?php
-      $forum = new Forum();
-      $topics = $forum-> getAllTopics();
-      if (count($topics) > 0) {
-          echo '<div class="">';
+      <div class="forum_container">
+          <div class="forum">
+              <?php
+              $forum = new Forum();
+              $topics = $forum-> getAllTopics();
+              if (count($topics) > 0) {
+                  echo '<div class="forum_topic_container">';
+                  echo '<div class="forum_topic_header">Ämnen</div>';
 
-          foreach ($topics as $topic) {
-              echo '<div class=""> ';
-              echo '<form action="forum-posts.php" method="post" id="topic" class="" name="topic">';
-              echo '<input name="topicName" id="topicName" type="submit" value=" '.$topic['Topic'].'">';
-              echo '<input name="topicID" id="topicID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
-              echo '</form>';
-              echo "</div>";
-              echo '</br>';
-          }
-          echo '</div>';
-      }
-       ?>
-    </div>
+                  foreach ($topics as $topic) {
+                      echo '<div class=""> ';
+                      echo '<form action="forum-posts.php" method="post" id="topic" class="" name="topic">';
+                      echo '<input class="forum_topic" name="topicName" id="topicName" type="submit" value=" '.$topic['Topic'].'">';
+                      echo '<input name="topicID" id="topicID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
+                      echo '</form>';
+                      echo "</div>";
+                  }
+                  echo '</div>';
+              }
+              ?>
+        </div>
+      </div>
   </body>
 </html>
