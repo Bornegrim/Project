@@ -7,3 +7,5 @@
     $post = new Post();
     $post->deletePost($postID);
   }
+
+  header("Location: index.php");

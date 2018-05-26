@@ -5,7 +5,7 @@
   if (isset($_POST['date'])) {
     $date = $_POST['date'];
     $booking = new Booking();
-    $result = $booking->getAllBookings($date);
+    $result = $booking->getAllBookingsByDate($date);
 
     $times = '
                 <select name="machine" id="machine" onchange="showSelected(this.value)">

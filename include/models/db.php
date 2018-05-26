@@ -86,12 +86,27 @@
 
     }
 
-    protected function getAllBookings($date) {
+    protected function getAllBookingsByDate($date) {
       $time = date("Y-m-d", strtotime($date));
 
       $sql = "SELECT TimeblockNumber, Machine FROM Booked_Timeblock WHERE DateBooked = '$time'";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
+    }
+
+    protected function getAllBookings() {
+
+      $sql = "SELECT Booked_Timeblock.TimeblockID, TimeblockNumber, DateBooked, Machine, Booking.User, FirstName FROM Booked_Timeblock JOIN Booking ON Booking.TimeblockID=Booked_Timeblock.TimeblockID JOIN User ON User.UserID=Booking.User";
+      $result = mysqli_query($this->connect(), $sql);
+      return $result;
+    }
+
+    protected function cancelBooking($timeblockID) {
+      $sql1 = "DELETE FROM Booked_Timeblock WHERE TimeblockID='$timeblockID'";
+      $sql2 = "DELETE FROM Booking WHERE TimeblockID='$timeblockID'";
+      mysqli_query($this->connect(), $sql1);
+      mysqli_query($this->connect(), $sql2);
+
     }
 
     protected function createTopic($topicName) {

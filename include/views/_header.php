@@ -10,6 +10,7 @@
       <div class="menu">
         <ul class="menulist">
             <li class="menulist_item"><a href="index.php">Hem</a></li>
+            <li class="menulist_item"><a href="cancel-booking.php">Min sida</a></li>
             <li class="menulist_item"><a href="forum.php">Diskussionsrummet</a></li>
             <li class="menulist_item"><a href="http://www.tvättråd.se" target="_blank">Tvätthjälp!</a></li>
         </ul>
