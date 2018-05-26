@@ -34,6 +34,8 @@ $(document).ready(function () {
   $(".date-picker-2").datepicker({
     minDate: 0,
     maxDate: 30,
+    firstDay: 1,
+
 
     onSelect: function(dateText) {
       $('#example-popover-2-title').html('<b>Tvättider</b>');
@@ -48,6 +50,8 @@ $(document).ready(function () {
         //confirm("du kommer att boka" + dateText);
       });
     }
+
+    
 
 
   });

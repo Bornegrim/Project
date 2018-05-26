@@ -96,7 +96,7 @@
 
     protected function getAllBookings() {
 
-      $sql = "SELECT Booked_Timeblock.TimeblockID, TimeblockNumber, DateBooked, Machine, Booking.User, FirstName FROM Booked_Timeblock JOIN Booking ON Booking.TimeblockID=Booked_Timeblock.TimeblockID JOIN User ON User.UserID=Booking.User";
+      $sql = "SELECT Booked_Timeblock.TimeblockID, TimeblockNumber, DateBooked, Machine, Booking.User, FirstName FROM Booked_Timeblock JOIN Booking ON Booking.TimeblockID=Booked_Timeblock.TimeblockID JOIN User ON User.UserID=Booking.User ORDER BY DateBooked ASC";
       $result = mysqli_query($this->connect(), $sql);
       return $result;
     }
