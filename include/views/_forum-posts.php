@@ -10,13 +10,13 @@
 
   </body>
 </html>
-<div class="forum_input_container">
-    <div class="forum_input">
+<div  class="forum_input_container">
+    <div  class="forum_input">
         <div class="forum_title">
             <h1><?php echo $topicName ?></h1>
         </div>
 <?php
-
+    echo '<div name="forumtest" id="forumtest"';
     if (count($allPosts) > 0) {
         echo '<div class="post_container">';
         foreach ($allPosts as $post) {
@@ -28,16 +28,16 @@
             echo '</br>';
             echo $post['Date'];
             if (!isset($_SESSION['Admin']) && $_SESSION['User'] == $post['UserID']) {
-              echo '<form action="delete-forum-posts-process.php" method="post" name="deletePost" id="deletePost">
+              echo '<form action="" method="post" name="deletePost" id="deletePost">
                     <input type="text" class="hide" name="postID" id="postID" value="'.$post['Forum_PostID'].'"><br>
-                    <button type="submit" name="delete" id="delete">delete</button>
+                    <button type="button" name="delete" id="delete">delete</button>
                     </form>
                     ';
             }
             if (isset($_SESSION['Admin'])) {
-              echo '<form action="delete-forum-posts-process.php" method="post" name="deletePost" id="deletePost">
+              echo '<form action="" method="post" name="deletePost" id="deletePost">
                     <input type="text" class="hide" name="postID" id="postID" value="'.$post['Forum_PostID'].'"><br>
-                    <button type="submit" name="delete" id="delete">delete</button>
+                    <button type="button" name="delete" id="delete">delete</button>
                     </form>
                     ';
         }
@@ -49,5 +49,6 @@
   }
   echo '</div>';
 }?>
+ </div>
   </div>
 </div>

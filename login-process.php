@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
   } else if ($loginAdmin) {
     $authorizer->set('Email', $email);
     $authorizer->set('Name', $nameAdmin);
-    $authorizer->set('User', $UserID);
+    $authorizer->set('User', $UserIDadmin);
     $authorizer->set('Admin', $UserIDadmin);
 
     header("Location: index.php");

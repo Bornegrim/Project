@@ -1,103 +1,195 @@
-
-$(document).ready(function () {
-  $('#test123').click(function(){
-    alert("test");
-  });
-});
-
-
 $(document).ready(function () {
   $("#PostFormButton").click(function(e) {
-
     var url = "posts-create.php";
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: $("#postForm").serialize(),
-         });
-
-    $.ajax({
-        url: "index.php",
-        data: {
-        },
-        type: "POST",
-        dataType: "html",
-        success: function (data) {
-
+    $.ajax ({
+      type: "POST",
+      url: url,
+      data: $("#postForm").serialize(),
+      success: function (data) {
+        $.ajax({
+          url: "index.php",
+          data: {},
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
             var result = $('<div />').append(data).find('#updateAjax').html();
             $('#updateAjax').html(result);
-        },
+          },
+        });
+      }
     });
-
     e.preventDefault();
-});
+  });
 });
 
 $(document).ready(function () {
   $('body').on('click', '.deletebutton', function(e) {
-
-    var url = "delete-posts-process.php";
+    var form = $(this).closest('form');
     $.ajax({
-           type: "POST",
-           url: url,
-
-           data: $("#deletePost").serialize(),
-         });
-
-    $.ajax({
-        url: "index.php",
-        data: {
-        },
-        type: "POST",
-
-        dataType: "html",
-        success: function (data) {
-
+      type: "POST",
+      url: 'delete-posts-process.php',
+      data: form.serialize(),
+      success: function (data) {
+        $.ajax({
+          url: "index.php",
+          data: {
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
             var result = $('<div />').append(data).find('#updateAjax').html();
             $('#updateAjax').html(result);
-        },
+          },
+        });
+      },
     });
-
     e.preventDefault();
-});
+  });
 });
 
+$(document).ready(function () {
+  $('body').on('click', '#forumbt', function(e) {
 
+    $.ajax({
+      type: "POST",
+      url: 'forum-process.php',
+      data: $("#forumTopic").serialize(),
+      success: function (data) {
+        $.ajax({
+          url: "forum.php",
+          data: {
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
+            var result = $('<div />').append(data).find('#forum').html();
+            $('#forum').html(result);
+          },
+        });
+      },
+    });
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function () {
+  $('body').on('click', '#delete', function(e) {
+    var form = $(this).closest('form');
+
+    $.ajax({
+      type: "POST",
+      url: 'forum-delete-process.php',
+      data: form.serialize(),
+      success: function (data) {
+        $.ajax({
+          url: "forum.php",
+          data: {
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
+            var result = $('<div />').append(data).find('#forum').html();
+            $('#forum').html(result);
+          },
+        });
+      },
+    });
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function () {
+  $('body').on('click', '#forumPostbb', function(e) {
+    var form = $('#forumPost');
+    var topicID = $('#topicID').val();
+    $.ajax({
+      type: "POST",
+      url: 'forum-post-process.php',
+      data: form.serialize(),
+
+      success: function (data) {
+        $.ajax({
+          url: "forum-posts.php",
+          data: {
+            'topicID': topicID
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
+            var result = $('<div />').append(data).find('#forumtest').html();
+            console.log(result);
+            $('#forumtest').html(result);
+          },
+        });
+      },
+    });
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function () {
+  $('body').on('click', '#delete', function(e) {
+    var form = $(this).closest('form');
+    var topicID = $('#topicID').val();
+    $.ajax({
+      type: "POST",
+      url: 'delete-forum-posts-process.php',
+      data: form.serialize(),
+
+      success: function (data) {
+        console.log(data);
+        $.ajax({
+          url: "forum-posts.php",
+          data: {
+            'topicID': topicID
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
+            var result = $('<div />').append(data).find('#forumtest').html();
+            console.log(result);
+            $('#forumtest').html(result);
+          },
+        });
+      },
+    });
+    e.preventDefault();
+  });
+});
 
 function validateEmail(x) {
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        return false;
-    } else {
-      return true;
-    }
+  var atpos = x.indexOf("@");
+  var dotpos = x.lastIndexOf(".");
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    return false;
+  } else {
+    return true;
+  }
 
 }
 
 $(document).ready(function() {
   $('#loginForm').submit(function(){
     if(!validateEmail($.trim($('#email').val())))  {
-
       alert('Please enter a valid email!');
       return false;
     }
-     else if($.trim($('#password').val()) == "") {
-        alert('Please enter a password!');
-        return false;
-      }
+    else if($.trim($('#password').val()) == "") {
+      alert('Please enter a password!');
+      return false;
+    }
 
-    })
+  })
 });
 
 function checkedChanged(element) {
-    var myLayer = document.getElementById('reg');
-    if (element.checked === true) {
-        myLayer.className = "blue_button";
-        myLayer.disbled = "";
-    }
-    else {
-        myLayer.className = "gray_button";
-        myLayer.disabled = "disabled";
-    }
+  var myLayer = document.getElementById('reg');
+  if (element.checked === true) {
+    myLayer.className = "blue_button";
+    myLayer.disbled = "";
+  }
+  else {
+    myLayer.className = "gray_button";
+    myLayer.disabled = "disabled";
+  }
 };
