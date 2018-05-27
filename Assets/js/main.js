@@ -117,7 +117,6 @@ $(document).ready(function () {
           dataType: "html",
           success: function (data) {
             var result = $('<div />').append(data).find('#forumtest').html();
-            console.log(result);
             $('#forumtest').html(result);
           },
         });
@@ -137,7 +136,6 @@ $(document).ready(function () {
       data: form.serialize(),
 
       success: function (data) {
-        console.log(data);
         $.ajax({
           url: "forum-posts.php",
           data: {
@@ -147,8 +145,35 @@ $(document).ready(function () {
           dataType: "html",
           success: function (data) {
             var result = $('<div />').append(data).find('#forumtest').html();
-            console.log(result);
+
             $('#forumtest').html(result);
+          },
+        });
+      },
+    });
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function () {
+  $('body').on('click', '#cancel', function(e) {
+    var form = $(this).closest('form');
+    $.ajax({
+      type: "POST",
+      url: 'cancel-booking-process.php',
+      data: form.serialize(),
+
+      success: function (data) {
+        $.ajax({
+          url: "cancel-booking.php",
+          data: {
+          },
+          type: "POST",
+          dataType: "html",
+          success: function (data) {
+            var result = $('<div />').append(data).find('#canceltest').html();
+            console.log(result);
+            $('#canceltest').html(result);
           },
         });
       },

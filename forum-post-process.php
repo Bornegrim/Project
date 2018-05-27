@@ -8,8 +8,9 @@
     $date = date("Y-m-d");
     $message = $_POST['message'];
     $topicID = $_POST['topicID'];
-    $userID = $_SESSION['User'];
-
+    if (isset($_SESSION['User'])) {
+      $userID = $_SESSION['User'];
+    }
 
 
     $forum = new Forum();

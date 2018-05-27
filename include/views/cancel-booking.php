@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Assets/js/main.js"></script>
     <title></title>
   </head>
   <body>
     <div class="forum_container">
-        <div class="forum">
+        <div name="canceltest" id="canceltest" class="forum">
             <?php
 
             if (count($bookings) > 0) {
@@ -37,9 +39,9 @@
                     echo '<br>';
 
                     echo "Tvättmaskin: ". $booking['Machine']. '<br>';
-                    echo '<form action="cancel-booking-process.php" method="post"  class="" id="cancelForm" name="cancelForm">';
+                    echo '<form action="" method="post"  class="" id="cancelForm" name="cancelForm">';
                     echo '<input name="TimeblockID" id="TimeblockID" class="hide" type="text" value=" '.$booking['TimeblockID'].' ">';
-                    echo '<input name="cancel" id="cancel" value="Avboka" type="submit">';
+                    echo '<input name="cancel" id="cancel" value="Avboka" type="button">';
                     echo '</form>';
                     echo "</div>";
                   }
@@ -69,7 +71,7 @@
 
                     echo '<form action="cancel-booking-process.php" method="post" id="cancelForm" class="" name="cancelForm">';
                     echo '<input name="TimeblockID" id="TimeblockID" class="hide" type="text" value=" '.$booking['TimeblockID'].' ">';
-                    echo '<input name="cancel" id="cancel" type="submit">';
+                    echo '<input name="cancel" id="cancel" value="Avboka" type="button">';
                     echo '</form>';
                     echo "</div>";
                   }
