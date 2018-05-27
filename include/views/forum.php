@@ -17,7 +17,7 @@
                   echo '<div class="forum_topic_header">Ämnen</div>';
 
                   foreach ($topics as $topic) {
-                      echo '<div class=""> ';
+                      echo '<div class="topics"> ';
                       echo '<form action="forum-posts" method="post" id="topic" class="" name="topic">';
                       echo '<input class="forum_topic" name="topicName" id="topicName" type="submit" value=" '.$topic['Topic'].'">';
                       echo '<input name="topicID" id="topicID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
@@ -26,7 +26,7 @@
                       if (isset($_SESSION['Admin'])) {
                         echo '<form action="" method="post" name="deletePost" id="deletePost">
                               <input type="text" class="hide" name="forumID" id="forumID" value="'.$topic['ForumID'].'"><br>
-                              <button type="submit" name="delete" id="delete">delete</button>
+                              <button type="submit" class="deletebutton" name="delete" id="delete">Ta bort</button>
                               </form>';
                             }
                   }
