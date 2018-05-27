@@ -48,19 +48,19 @@
                     echo '<div class=""> ';
                     echo $booking['FirstName']. '<br>';
                     echo $booking['DateBooked']. '<br>';
-                    if ($booking['TimeblockNumber'] === 1) {
+                    if ($booking['TimeblockNumber'] == 1) {
                       echo "07:00 - 10:00";
                     }
-                    if ($booking['TimeblockNumber'] === 2) {
+                    if ($booking['TimeblockNumber'] == 2) {
                       echo "10:00 - 13:00";
                     }
-                    if ($booking['TimeblockNumber'] === 3) {
+                    if ($booking['TimeblockNumber'] == 3) {
                       echo "13:00 - 16:00";
                     }
-                    if ($booking['TimeblockNumber'] === 4) {
+                    if ($booking['TimeblockNumber'] == 4) {
                       echo "16:00 - 19:00";
                     }
-                    if ($booking['TimeblockNumber'] === 5) {
+                    if ($booking['TimeblockNumber'] == 5) {
                       echo "19:00 - 22:00";
                     }
                     echo '<br>';

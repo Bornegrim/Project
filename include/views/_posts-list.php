@@ -4,7 +4,7 @@
   </head>
     <body>
 
-        <div class="messageBoard">
+        <div name="updateAjax" id="updateAjax" class="messageBoard">
             <?php
                 $post = new Post();
                 $allPosts = $post-> getAllPosts();
@@ -20,9 +20,9 @@
                         echo '</br>';
                         echo $post['Date'];
                         if (isset($_SESSION['Admin'])) {
-                          echo '<form action="delete-posts-process.php" method="post">
+                          echo '<form id="deletePost" name="deletePost" action="" method="post">
                                 <input type="text" class="hide" name="postID" id="postID" value="'.$post['PostID'].'"><br>
-                                <button type="submit" name="delete" id="delete">delete</button>
+                                <button type="button" class="deletebutton" name="delete" id="delete">delete</button>
                                 </form>';
                         }
                         echo "</div>";

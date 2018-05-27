@@ -7,15 +7,62 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  $('#postForm').submit(function(){
-     if($.trim($('#message').val()) == ""){
-        alert('Post can not be left blank');
-        return false;
-     } else {
-       return true;
-     }
- })
+  $("#PostFormButton").click(function(e) {
+
+    var url = "posts-create.php";
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#postForm").serialize(),
+         });
+
+    $.ajax({
+        url: "index.php",
+        data: {
+        },
+        type: "POST",
+        dataType: "html",
+        success: function (data) {
+
+            var result = $('<div />').append(data).find('#updateAjax').html();
+            $('#updateAjax').html(result);
+        },
+    });
+
+    e.preventDefault();
 });
+});
+
+$(document).ready(function () {
+  $('body').on('click', '.deletebutton', function(e) {
+
+    var url = "delete-posts-process.php";
+    $.ajax({
+           type: "POST",
+           url: url,
+
+           data: $("#deletePost").serialize(),
+         });
+
+    $.ajax({
+        url: "index.php",
+        data: {
+        },
+        type: "POST",
+
+        dataType: "html",
+        success: function (data) {
+
+            var result = $('<div />').append(data).find('#updateAjax').html();
+            $('#updateAjax').html(result);
+        },
+    });
+
+    e.preventDefault();
+});
+});
+
+
 
 function validateEmail(x) {
     var atpos = x.indexOf("@");
