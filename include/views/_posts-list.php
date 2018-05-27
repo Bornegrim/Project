@@ -1,6 +1,9 @@
 <html lang="swe" dir="ltr">
   <head>
-
+	<meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Assets/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
   </head>
     <body>
 
@@ -22,7 +25,7 @@
                         if (isset($_SESSION['Admin'])) {
                           echo '<form id="deletePost" name="deletePost" action="" method="post">
                                 <input type="text" class="hide" name="postID" id="postID" value="'.$post['PostID'].'"><br>
-                                <button type="button" class="deletebutton" name="delete" id="delete">delete</button>
+                                <button type="button" class="deletebutton" name="delete" id="delete">Ta bort</button>
                                 </form>';
                         }
                         echo "</div>";

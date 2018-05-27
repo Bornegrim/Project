@@ -233,6 +233,22 @@ h2 {
     margin-bottom: 15px;
 }
 
+.deletebutton{
+  width: 100%;
+  background-color: #ed5836;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 100px;
+}
+
+.forum_topic{
+  font-size: 50px !important;
+}
 #loginForm p {
     padding: 10px;
     font-size: 14pt;
@@ -416,7 +432,7 @@ h2 {
     color: white;
     font-size: 14pt;
     padding: 12px 20px;
-    
+
 }
 
 .forum_topic {
@@ -503,4 +519,4 @@ h2 {
     .messageBoard {
         width: 300px;
     }
-} 
+}
