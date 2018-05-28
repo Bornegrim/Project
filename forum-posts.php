@@ -12,7 +12,6 @@ if (!$session) {
 $topicName = $_POST['topicName'];
 $topicID = $_POST['topicID'];
 
-
 $forum = new Forum();
 $allPosts = $forum->getAllForumPosts($topicID);
 

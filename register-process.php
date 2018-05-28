@@ -9,7 +9,6 @@ if (isset($_POST['reg'])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
 
-
   $user = new User();
   $register = $user->register($firstName, $lastName, $password, $email);
 

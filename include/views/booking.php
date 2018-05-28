@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="Assets/css/main.css">
 
-
 </head>
 <body>
   <div class=" col-md-4">
