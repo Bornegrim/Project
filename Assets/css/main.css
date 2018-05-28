@@ -297,8 +297,10 @@ h2 {
 }
 
 .messageBoard_container {
+	background-color:white;
     position: relative;
     padding: 10px;
+	padding-bottom:20px !important;
     float: right;
     border: solid 5px #001f33;
     margin-right: 40px;
@@ -306,6 +308,7 @@ h2 {
     margin-bottom: 40px;
     margin-top: -50px;
     max-height: 450px;
+	box-sizing:content-box;
 }
 
 .messageBoard_container h2 {
