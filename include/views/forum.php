@@ -18,7 +18,7 @@
 
                   foreach ($topics as $topic) {
                       echo '<div class="topics"> ';
-                      echo '<form action="forum-posts" method="post" id="topic" class="" name="topic">';
+                      echo '<form action="forum-posts.php" method="post" id="topic" class="" name="topic">';
                       echo '<input class="forum_topic" name="topicName" id="topicName" type="submit" value=" '.$topic['Topic'].'">';
                       echo '<input name="topicID" id="topicID" class="hide" type="text" value=" '.$topic['ForumID'].' ">';
                       echo '</form>';
