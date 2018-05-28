@@ -6,8 +6,8 @@
   <script src="Assets/js/main.js"></script>
 </head>
 <body>
-    <div class="title">
-        <h1>Studentgatans Bostadsförening: TVÄTTSTUGAN</h1>
-    </div>
+  <div class="title">
+    <h1>Studentgatans Bostadsförening: TVÄTTSTUGAN</h1>
+  </div>
 </body>
 </html>

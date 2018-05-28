@@ -1,10 +1,10 @@
 <?php
-  require 'include/bootstrap.php';
+require 'include/bootstrap.php';
 
 
 
-    $forumID = $_POST['forumID'];
+$forumID = $_POST['forumID'];
 
-    $forum = new Forum();
-    
-    $forum->deleteForumTopic($forumID);
+$forum = new Forum();
+
+$forum->deleteForumTopic($forumID);

@@ -2,144 +2,144 @@
 
 
 .show {
-    display:inline-block;
+  display:inline-block;
 }
 .hide {
-    display:none;
+  display:none;
 }
 
 .btn {
-	margin: 1%;
+  margin: 1%;
 }
 
 #datep {
-    display: none;
+  display: none;
 }
 
 .ui-datepicker-calendar tbody td > a.hover-calendar-cell {
-    border: 1px solid #074e91;
-    background: #5bacf7 url(images/ui-bg_glass_15_5bacf7_1x400.png) 50% 50% repeat-x;
-    font-weight: normal;
-    color: #1a1a1a;
+  border: 1px solid #074e91;
+  background: #5bacf7 url(images/ui-bg_glass_15_5bacf7_1x400.png) 50% 50% repeat-x;
+  font-weight: normal;
+  color: #1a1a1a;
 }
 
 #addon{background-color:#999; width:100%}
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #e6f5ff;
+  font-family: 'Raleway', sans-serif;
+  background-color: #e6f5ff;
 }
 
 .title {
-    margin: 20px;
-    margin-left: 40px;
-    font-size: 18px;
-    max-width: 900px;
+  margin: 20px;
+  margin-left: 40px;
+  font-size: 18px;
+  max-width: 900px;
 }
 
 h1 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 h2 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .forum_title {
-    margin-top: 40px;
-    font-size: 18px;
-    text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .posts_container {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .header {
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: #001f33;
-    color: white;
-    z-index: +1;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #001f33;
+  color: white;
+  z-index: +1;
 }
 
 .headerlist {
-    font-size: 20px;
-    list-style-type: none;
-    list-style: 20px;
-    margin: 0;
-    overflow: hidden;
-    background-color: #001f33;
-    height: 110px;
+  font-size: 20px;
+  list-style-type: none;
+  list-style: 20px;
+  margin: 0;
+  overflow: hidden;
+  background-color: #001f33;
+  height: 110px;
 }
 
 .headerlist_item {
-    padding-top: 20px;
-    float: right;
+  padding-top: 20px;
+  float: right;
 }
 
 .headerlist_item a:hover {
-    color: #ffa64d;
+  color: #ffa64d;
 }
 
 .headerlist_img {
-    float: left;
-    padding-left: 20px;
+  float: left;
+  padding-left: 20px;
 }
 
 .headerlist_item a, .headerlist_item p {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
 }
 
 .headerlist .header_img {
-    padding: 10px;
-    border-radius: 15%;
-    width: 90px;
-    height: auto;
-    box-sizing: content-box;
+  padding: 10px;
+  border-radius: 15%;
+  width: 90px;
+  height: auto;
+  box-sizing: content-box;
 }
 
 .header2_bottom {
-    width: 100%;
-    height: 2px;
-    background-color: #e6f5ff;
+  width: 100%;
+  height: 2px;
+  background-color: #e6f5ff;
 }
 
 .menulist {
-    font-size: 18px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3399ff;
+  font-size: 18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3399ff;
 }
 
 .menulist_item {
-    float: left;
+  float: left;
 }
 
 .menulist_item a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    padding-left: 20px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  padding-left: 20px;
+  text-decoration: none;
 }
 
 .menulist_item a:hover {
-    color: black;
+  color: black;
 }
 
 .booking {
@@ -152,85 +152,85 @@ h2 {
 }
 
 .login_container {
-    display: block;
-    text-align: center;
-    margin-top: 1%;
+  display: block;
+  text-align: center;
+  margin-top: 1%;
 }
 
 .dark_container {
-    display: inline-block;
-    text-align: center;
-    padding: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #001f33;
-    color: white;
-    width: 300px;
-    border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #001f33;
+  color: white;
+  width: 300px;
+  border-radius: 10px;
 }
 
 .dark_container .login_img {
-    width: 80%;
-    height: auto;
+  width: 80%;
+  height: auto;
 }
 
 .dark_container .register_img {
-    width: 55%;
-    height: auto;
+  width: 55%;
+  height: auto;
 }
 
 #loginForm {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 #loginForm input[type=text], input[type=password] {
-    width: 100%;
-    padding: 10px 15px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .blue_button {
-    width: 100%;
-    background-color: #3399ff;
-    color: white;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 15px;
+  width: 100%;
+  background-color: #3399ff;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .blue_button:hover {
-    background-color: #0080ff;
+  background-color: #0080ff;
 }
 
 .disable_button {
-    width: 100%;
-    background-color: darkgray;
-    color: grey;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 15px;
-		pointer-events: none;
+  width: 100%;
+  background-color: darkgray;
+  color: grey;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  pointer-events: none;
 }
 
 .gray_button {
-    width: 100%;
-    background-color: darkgray;
-    color: grey;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 15px;
+  width: 100%;
+  background-color: darkgray;
+  color: grey;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 .deletebutton{
@@ -253,276 +253,276 @@ h2 {
   font-size: 50px !important;
 }
 #loginForm p {
-    padding: 10px;
-    font-size: 14pt;
+  padding: 10px;
+  font-size: 14pt;
 }
 
 #loginForm a {
-    color: #ffa64d;
-    text-decoration: none;
+  color: #ffa64d;
+  text-decoration: none;
 }
 
 #loginForm a:hover{
-    color: #3399ff;
+  color: #3399ff;
 }
 
 #loginForm .change_page {
-    background-color: #e6f5ff;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 4px;
-    color: black;
-    text-decoration: none;
+  background-color: #e6f5ff;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
 }
 
 #loginForm .change_page:hover {
-    background-color: #66c2ff;
-    color: black;
+  background-color: #66c2ff;
+  color: black;
 }
 
 #loginForm .accept_terms {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 2px;
-    border-top: solid 2px #e6f5ff;
-    background-color: #001f33;
-    color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2px;
+  border-top: solid 2px #e6f5ff;
+  background-color: #001f33;
+  color: white;
 }
 
 .messageBoard_container {
-	background-color:white;
-    position: relative;
-    padding: 10px;
-	padding-bottom:20px !important;
-    float: right;
-    border: solid 5px #001f33;
-    margin-right: 40px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    margin-top: -50px;
-    max-height: 450px;
-	box-sizing:content-box;
+  background-color:white;
+  position: relative;
+  padding: 10px;
+  padding-bottom:20px !important;
+  float: right;
+  border: solid 5px #001f33;
+  margin-right: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: -50px;
+  max-height: 450px;
+  box-sizing:content-box;
 }
 
 .messageBoard_container h2 {
-    text-align: center;
-    margin-bottom: 5px;
-    z-index: -1 !important;
+  text-align: center;
+  margin-bottom: 5px;
+  z-index: -1 !important;
 }
 
 .messageBoard {
-    height: 200px;
-    width: 450px;
-    max-width: 450px;
-    padding: 5px;
-    border: solid 1px #001f33;
-    overflow: auto;
+  height: 200px;
+  width: 450px;
+  max-width: 450px;
+  padding: 5px;
+  border: solid 1px #001f33;
+  overflow: auto;
 }
 
 .post {
-    padding-bottom: 5px;
-    border-bottom: solid 1px #3399ff;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #3399ff;
 }
 
 .message {
-    width: 450px
+  width: 450px
 }
 
 .messageBoard_input {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .messageBoard_input input[type=submit] {
-    display: block;
-    width: 100%;
-    background-color: #3399ff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  background-color: #3399ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .messageBoard_input input[type=submit]:hover {
-    background-color: #0080ff;
+  background-color: #0080ff;
 }
 
 .legal_container {
-    display: block;
-    text-align: center;
-    margin-top: 1%;
+  display: block;
+  text-align: center;
+  margin-top: 1%;
 }
 
 .legal {
-    display: inline-block;
-    text-align: left;
-    padding: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #001f33;
-    color: white;
-    width: 700px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #001f33;
+  color: white;
+  width: 700px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .legal h1 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .legal h2 {
-    padding-top: 15px;
-    padding-bottom: 7px;
+  padding-top: 15px;
+  padding-bottom: 7px;
 }
 
 .legal #raccoon {
-    color: #ffa64d;
+  color: #ffa64d;
 }
 
 .forum_container {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .forum_input_container {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .forum {
-    display: inline-block;
-    text-align: left;
-    padding: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #001f33;
-    color: white;
-    width: 60%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 30px;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #001f33;
+  color: white;
+  width: 60%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .forum_title h1 {
-    color: white;
-    margin-bottom: 80px;
+  color: white;
+  margin-bottom: 80px;
 }
 
 .forum_input {
-    display: inline-block;
-    text-align: left;
-    padding: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #001f33;
-    color: white;
-    width: 60%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-top: 40px;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #001f33;
+  color: white;
+  width: 60%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 40px;
 }
 
 .forum_topic_container {
-    border: solid 2px #3399ff;
+  border: solid 2px #3399ff;
 }
 
 .forum_topic_header {
-    background-color: #3399ff;
-    color: white;
-    font-size: 14pt;
-    padding: 12px 20px;
+  background-color: #3399ff;
+  color: white;
+  font-size: 14pt;
+  padding: 12px 20px;
 
 }
 
 .forum_topic {
-    font-family: 'Raleway', sans-serif;
-    text-align: left;
-    width: 100%;
-    background-color: #001f33;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-top: solid 1px #3399ff;
-    cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  width: 100%;
+  background-color: #001f33;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-top: solid 1px #3399ff;
+  cursor: pointer;
 }
 
 .forum_topic:hover {
-    color: #ffa64d;
+  color: #ffa64d;
 }
 
 .topic {
-    margin-bottom: 5px;
-    height: 25px;
-    width: 200px;
+  margin-bottom: 5px;
+  height: 25px;
+  width: 200px;
 }
 
 .submit_topic {
-    width: 200px !important;
+  width: 200px !important;
 }
 
 .comment {
-    margin-bottom: 5px;
-    height: 60px;
-    width: 450px;
+  margin-bottom: 5px;
+  height: 60px;
+  width: 450px;
 }
 
 .submit_comment {
-    width: 450px !important;
+  width: 450px !important;
 }
 
 .forum_input_header h2 {
-    font-family: 'Raleway', sans-serif;
-    margin-top: 20px;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 20px;
 }
 
 .col-md-4 {
-    height: 50px !important;
-    z-index: -1 !important;
+  height: 50px !important;
+  z-index: -1 !important;
 }
 
 .ui-datepicker-header, ui-widget-header, ui-helper-clearfix, ui-corner-all {
-    height: 50px !important;
+  height: 50px !important;
 }
 
 .ui-helper-clearfix:before, .ui-helper-clearfix:after  {
-    content: none !important;
+  content: none !important;
 }
 
 .ui-datepicker-inline .ui-datepicker .ui-widget .ui-widget-content .ui-helper-clearfix .ui-corner-all {
-    height: 50px !important;
+  height: 50px !important;
 }
 
 .date-picker-2, .hasDatepicker {
-    width: 238px !important;
-    margin: 0px !important;
+  width: 238px !important;
+  margin: 0px !important;
 }
 
 .popover {
-    margin-top: 100px;
-    float: left !important;
-    margin-left: 20px !important;
+  margin-top: 100px;
+  float: left !important;
+  margin-left: 20px !important;
 }
 
 .arrow, .pop {
-    top: 30% !important;
+  top: 30% !important;
 }
 
 
 @media screen and (max-width: 1375px) {
-    .messageBoard_container {
-        margin-top: 0;
-    }
+  .messageBoard_container {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 990px) {
-    .messageBoard {
-        width: 300px;
-    }
+  .messageBoard {
+    width: 300px;
+  }
 }

@@ -8,10 +8,10 @@ class User extends Db {
     if ($atpos === false || $dotpos === false) {
       return false;
     } else {
-        if ($atpos<1 || $dotpos<($atpos+2) || $dotpos+2>=(strlen($data))) {
-          return false;
-        } else {
-          return true;
+      if ($atpos<1 || $dotpos<($atpos+2) || $dotpos+2>=(strlen($data))) {
+        return false;
+      } else {
+        return true;
       }
     }
   }
@@ -19,22 +19,17 @@ class User extends Db {
   public function login($email, $password, $table) {
 
     $db = new Db();
-    $conn = $db->connect();
 
+    if ($this->test_email($email)) {
 
-    $emaillogin = mysqli_real_escape_string($conn, $email);
-    $passwordlogin = mysqli_real_escape_string($conn, $password);
+      $result = $db->getUser($db->escape($email), $table);
 
-    if ($this->test_email($emaillogin)) {
+      if (mysqli_num_rows($result) == 1) {
+        $userdata = mysqli_fetch_array($result);
+        $hashedpass = $userdata['Password'];
 
-        $result = $db->getUser($emaillogin, $table);
-
-        if (mysqli_num_rows($result) == 1) {
-          $userdata = mysqli_fetch_array($result);
-          $hashedpass = $userdata['Password'];
-
-          return password_verify($passwordlogin, $hashedpass);
-        }
+        return password_verify($password, $hashedpass);
+      }
 
     }
   }
@@ -42,50 +37,44 @@ class User extends Db {
   public function register ($firstName, $lastName, $password, $email) {
 
     $db = new Db();
-    $conn = $db->connect();
 
-    $emailreg = mysqli_real_escape_string($conn, trim($email));
-    $passwordreg = mysqli_real_escape_string($conn, trim($password));
-    $firstNamereg = mysqli_real_escape_string($conn, trim($firstName));
-    $lastNamereg = mysqli_real_escape_string($conn, trim($lastName));
-
-    $result = $db->getEmail('Email', $emailreg, 'User');
+    $result = $db->getEmail('Email', $db->escape($email), 'User');
 
     if (mysqli_num_rows($result) > 0) {
       header("Location: register.php?registerfail=1");
       exit();
-  } else {
+    } else {
 
-    if (!($this->test_email($emailreg))) {
-          $emailreg = "";
+      if (!($this->test_email($email))) {
+        $email = "";
       }
 
-    if (!Empty($emailreg) && (!Empty($passwordreg) && !($passwordreg === " "))) {
-      $passwordhashed = password_hash($passwordreg, PASSWORD_DEFAULT);
-      $db->regUser($firstNamereg, $lastNamereg, $passwordhashed, $emailreg);
+      if (!Empty($email) && (!Empty($password) && !($password === " "))) {
+        $passwordhashed = password_hash($password, PASSWORD_DEFAULT);
+        $db->regUser($db->escape($firstName), $db->escape($lastName), $db->escape($passwordhashed), $db->escape($email));
 
-    } else {
-      header("Location: register.php");
-      exit();
-    }
+      } else {
+        header("Location: register.php");
+        exit();
+      }
     }
   }
 
-    public function getName ($column, $value, $table) {
-        $db = new Db();
+  public function getName ($column, $value, $table) {
+    $db = new Db();
 
-        $result = $db->getEmail($column, $value, $table);
-        $row = mysqli_fetch_array($result);
-        $name = $row['FirstName'];
-        return $name;
-    }
+    $result = $db->getEmail($column, $db->escape($value), $table);
+    $row = mysqli_fetch_array($result);
+    $name = $row['FirstName'];
+    return $name;
+  }
 
-    public function getUser ($email, $table) {
-        $db = new Db();
+  public function getUser ($email, $table) {
+    $db = new Db();
 
-        $result = $db->getUser($email, $table);
-        $row = mysqli_fetch_array($result);
-        $UserId = $row['UserID'];
-        return $UserId;
-    }
+    $result = $db->getUser($db->escape($email), $table);
+    $row = mysqli_fetch_array($result);
+    $UserId = $row['UserID'];
+    return $UserId;
+  }
 }

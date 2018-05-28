@@ -5,20 +5,20 @@ function showSelected(value) {
     document.getElementById("bookingForm2").setAttribute("class", "hide");
     document.getElementById("bookingForm3").setAttribute("class", "hide");
   } else if (value == "2") {
-      document.getElementById("bookingForm1").setAttribute("class", "hide");
-      document.getElementById("bookingForm2").setAttribute("class", "show");
-      document.getElementById("bookingForm3").setAttribute("class", "hide");
+    document.getElementById("bookingForm1").setAttribute("class", "hide");
+    document.getElementById("bookingForm2").setAttribute("class", "show");
+    document.getElementById("bookingForm3").setAttribute("class", "hide");
   } else if (value == "3") {
-      document.getElementById("bookingForm1").setAttribute("class", "hide");
-      document.getElementById("bookingForm2").setAttribute("class", "hide");
-      document.getElementById("bookingForm3").setAttribute("class", "show");
+    document.getElementById("bookingForm1").setAttribute("class", "hide");
+    document.getElementById("bookingForm2").setAttribute("class", "hide");
+    document.getElementById("bookingForm3").setAttribute("class", "show");
   } else {
   }
 }
 
 
 $(document).ready(function () {
-
+  
   $('.date-picker-2').popover({
     html : true,
     content: function() {
@@ -51,7 +51,7 @@ $(document).ready(function () {
       });
     }
 
-    
+
 
 
   });

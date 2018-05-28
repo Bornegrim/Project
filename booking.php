@@ -1,7 +1,5 @@
 <?php
 
-
-
 $session = $authorizer->sessionExist('Email');
 
 if (!$session) {

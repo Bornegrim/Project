@@ -2,9 +2,7 @@
 
 require 'include/bootstrap.php';
 
+$timeblockID = $_POST['TimeblockID'];
 
-
-  $timeblockID = $_POST['TimeblockID'];
-
-  $booking = new booking();
-  $booking->cancelBooking($timeblockID);
+$booking = new booking();
+$booking->cancelBooking($timeblockID);

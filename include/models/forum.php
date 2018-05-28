@@ -5,9 +5,8 @@ class Forum extends Db {
   public function createTopic($topicName) {
 
     $db = new Db();
-    $conn = $db->connect();
     if(!(trim($topicName) == "") && !(trim($topicName)==" ")) {
-      $db -> createTopic(mysqli_real_escape_string($conn, $topicName));
+      $db -> createTopic($db->escape($topicName));
     }
 
   }
@@ -17,7 +16,7 @@ class Forum extends Db {
     $conn = $db->connect();
 
     if(!(trim($message) == "") && !(trim($message)==" ")) {
-      $db -> createForumPost($date, mysqli_real_escape_string($conn, $message), $ForumID, $UserID);
+      $db -> createForumPost($db->escape($date), $db->escape($message), $db->escape($ForumID), $db->escape($UserID));
     }
 
   }
@@ -39,7 +38,7 @@ class Forum extends Db {
 
   public function getAllForumPosts($ForumID) {
     $db = new Db();
-    $result = $db->getAllForumPosts($ForumID);
+    $result = $db->getAllForumPosts($db->escape($ForumID));
 
     $numRows = mysqli_num_rows($result);
 
@@ -53,11 +52,11 @@ class Forum extends Db {
 
   public function deleteForumTopic($forumID) {
     $db = new Db();
-    $db->deleteForumTopic($forumID);
+    $db->deleteForumTopic($db->escape($forumID));
   }
 
   public function deleteForumPost($forumPostID) {
     $db = new Db();
-    $db->deleteForumPost($forumPostID);
+    $db->deleteForumPost($db->escape($forumPostID));
   }
 }

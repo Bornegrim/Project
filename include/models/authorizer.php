@@ -3,7 +3,7 @@
 class Authorizer {
 
   public function __construct() {
-      session_start();
+    session_start();
   }
 
   public function set ($sessionName, $sessionValue) {
@@ -24,7 +24,7 @@ class Authorizer {
 
   public function get ($sessionName) {
     if ($this->sessionExist ($sessionName)) {
-        return $_SESSION[$sessionName];
+      return $_SESSION[$sessionName];
     }
   }
 }
