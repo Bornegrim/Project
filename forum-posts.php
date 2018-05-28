@@ -1,6 +1,13 @@
 <?php
 
-require '/include/bootstrap.php';
+require 'include/bootstrap.php';
+
+$session = $authorizer->sessionExist('Email');
+
+if (!$session) {
+  header('Location: login.php');
+  exit();
+}
 
 
   $topicName = $_POST['topicName'];

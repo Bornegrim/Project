@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="Assets/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="Assets/js/main.js"></script>
     <meta charset="utf-8">
     <title>Registration</title>
   </head>

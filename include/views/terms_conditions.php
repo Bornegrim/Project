@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="Assets/css/main.css">
         <meta charset="utf-8">
         <title>Terms & conditions</title>
     </head>

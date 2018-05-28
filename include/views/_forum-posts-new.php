@@ -1,7 +1,7 @@
 <html lang="swe" dir="ltr">
 <head>
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="Assets/css/main.css">
 </head>
     <body>
         <div class="forum_container">
