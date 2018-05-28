@@ -1,7 +1,7 @@
 <?php
 
 
-  require '/include/bootstrap.php';
+  require 'include/bootstrap.php';
 
 
 
