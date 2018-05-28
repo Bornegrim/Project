@@ -1,25 +1,32 @@
 $(document).ready(function () {
   $("#PostFormButton").click(function(e) {
-    var url = "posts-create.php";
-    $.ajax ({
-      type: "POST",
-      url: url,
-      data: $("#postForm").serialize(),
-      success: function (data) {
-        $.ajax({
-          url: "index.php",
-          data: {},
-          type: "POST",
-          dataType: "html",
-          success: function (data) {
-            var result = $('<div />').append(data).find('#updateAjax').html();
-            $('#updateAjax').html(result);
-          },
-        });
-      }
-    });
     e.stopImmediatePropagation();
     e.preventDefault();
+    var url = "posts-create.php";
+    var message = $.trim($('#message').val());
+    if ( message == "" || message == " ") {
+      alert("du måste skriva något!");
+    } else {
+      $.ajax ({
+        type: "POST",
+        url: url,
+        data: $("#postForm").serialize(),
+        success: function (data) {
+          $.ajax({
+            url: "index.php",
+            data: {},
+            type: "POST",
+            dataType: "html",
+            success: function (data) {
+              var result = $('<div />').append(data).find('#updateAjax').html();
+              $('#updateAjax').html(result);
+            },
+          });
+        }
+      });
+    }
+
+
   });
 });
 
@@ -50,26 +57,32 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('body').on('click', '#forumbt', function(e) {
-
-    $.ajax({
-      type: "POST",
-      url: 'forum-process.php',
-      data: $("#forumTopic").serialize(),
-      success: function (data) {
-        $.ajax({
-          url: "forum.php",
-          data: {
-          },
-          type: "POST",
-          dataType: "html",
-          success: function (data) {
-            var result = $('<div />').append(data).find('#forum').html();
-            $('#forum').html(result);
-          },
-        });
-      },
-    });
+    e.stopImmediatePropagation();
     e.preventDefault();
+    var message = $.trim($('.topic').val());
+    if ( message == "" || message == " ") {
+      alert("du måste skriva något!");
+    } else {
+      $.ajax({
+        type: "POST",
+        url: 'forum-process.php',
+        data: $("#forumTopic").serialize(),
+        success: function (data) {
+          $.ajax({
+            url: "forum.php",
+            data: {
+            },
+            type: "POST",
+            dataType: "html",
+            success: function (data) {
+              var result = $('<div />').append(data).find('#forum').html();
+              $('#forum').html(result);
+            },
+          });
+        },
+      });
+    }
+
   });
 });
 
@@ -103,27 +116,34 @@ $(document).ready(function () {
   $('body').on('click', '#forumPostbb', function(e) {
     var form = $('#forumPost');
     var topicID = $('#topicID').val();
-    $.ajax({
-      type: "POST",
-      url: 'forum-post-process.php',
-      data: form.serialize(),
-
-      success: function (data) {
-        $.ajax({
-          url: "forum-posts.php",
-          data: {
-            'topicID': topicID
-          },
-          type: "POST",
-          dataType: "html",
-          success: function (data) {
-            var result = $('<div />').append(data).find('#forumtest').html();
-            $('#forumtest').html(result);
-          },
-        });
-      },
-    });
+    e.stopImmediatePropagation();
     e.preventDefault();
+    var message = $.trim($('#message').val());
+    if ( message == "" || message == " ") {
+      alert("du måste skriva något!");
+    } else {
+      $.ajax({
+        type: "POST",
+        url: 'forum-post-process.php',
+        data: form.serialize(),
+
+        success: function (data) {
+          $.ajax({
+            url: "forum-posts.php",
+            data: {
+              'topicID': topicID
+            },
+            type: "POST",
+            dataType: "html",
+            success: function (data) {
+              var result = $('<div />').append(data).find('#forumtest').html();
+              $('#forumtest').html(result);
+            },
+          });
+        },
+      });
+    }
+
   });
 });
 
@@ -207,6 +227,9 @@ $(document).ready(function() {
 
   })
 });
+
+
+
 
 function checkedChanged(element) {
   var myLayer = document.getElementById('reg');

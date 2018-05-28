@@ -6,15 +6,20 @@ class Forum extends Db {
 
     $db = new Db();
     $conn = $db->connect();
-
-    $db -> createTopic(mysqli_real_escape_string($conn, $topicName));
+    if(!(trim($topicName) == "") && !(trim($topicName)==" ")) {
+      $db -> createTopic(mysqli_real_escape_string($conn, $topicName));
+    }
 
   }
 
   public function createForumPost($date, $message, $ForumID, $UserID) {
     $db = new Db();
     $conn = $db->connect();
-    $db -> createForumPost($date, mysqli_real_escape_string($conn, $message), $ForumID, $UserID);
+
+    if(!(trim($message) == "") && !(trim($message)==" ")) {
+      $db -> createForumPost($date, mysqli_real_escape_string($conn, $message), $ForumID, $UserID);
+    }
+
   }
 
   public function getAllTopics() {

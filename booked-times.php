@@ -48,7 +48,7 @@
           $form1block1 = '<input name="block1" type="submit" class="disable_button" value="07:00 – 10:00"><br>';
         }
         if ($row['TimeblockNumber'] == "2" && $row['Machine'] == "1") {
-          $form1block2 = '<input name="block2" type="submit" class="disable_button" value="10:00 – 13:00><br>';
+          $form1block2 = '<input name="block2" type="submit" class="disable_button" value="10:00 – 13:00"><br>';
         }
         if ($row['TimeblockNumber'] == "3" && $row['Machine'] == "1") {
           $form1block3 = '<input name="block3" type="submit" class="disable_button" value="13:00 – 16:00"><br>';
