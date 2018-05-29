@@ -448,12 +448,28 @@ h2 {
   color: white;
   padding: 12px 20px;
   border: none;
-  border-top: solid 1px #3399ff;
   cursor: pointer;
 }
 
 .forum_topic:hover {
   color: #ffa64d;
+}
+
+.topics {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.each_topic .deletebutton {
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.each_topic {
+    border-bottom: solid 1px #3399ff;
 }
 
 .topic {

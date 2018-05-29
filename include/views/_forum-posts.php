@@ -18,6 +18,7 @@
       if (count($allPosts) > 0) {
         echo '<div class="post_container">';
         foreach ($allPosts as $post) {
+            echo '<div class="one_post">';
           echo '<div class="post"> ';
           echo '<div class="name"> ';
           echo $post['FirstName'] . ": ";
@@ -25,6 +26,7 @@
           echo $post['Message'];
           echo '</br>';
           echo $post['Date'];
+            echo '<div class="delete_button">';
           if (!isset($_SESSION['Admin']) && $_SESSION['User'] == $post['UserID']) {
             echo '<form action="" method="post" name="deletePost" id="deletePost">
             <input type="text" class="hide" name="postID" id="postID" value="'.$post['Forum_PostID'].'"><br>
@@ -39,6 +41,8 @@
             </form>
             ';
           }
+            echo '</div>';
+            echo '</div>';
           echo "</div>";
         }
         echo '</div>';
